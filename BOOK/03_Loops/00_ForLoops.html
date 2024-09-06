@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Zafer Kosar">
 
-<title>3&nbsp; Variables – PySimp</title>
+<title>9&nbsp; For Loops – PySimp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../01_Basics/01_Lists.html" rel="next">
-<link href="../00_Installation/01_Libraries.html" rel="prev">
+<link href="../03_Loops/01_WhileLoops.html" rel="next">
+<link href="../02_Conditionals/01_IfConditionals.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html">Basics</a></li><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_Loops/00_ForLoops.html">Loops</a></li><li class="breadcrumb-item"><a href="../03_Loops/00_ForLoops.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">For Loops</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -181,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../01_Basics/00_Variables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../01_Basics/00_Variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables</span></span></a>
   </div>
 </li>
@@ -205,6 +204,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Conditionals</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_Conditionals/00_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Loops</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_Loops/00_ForLoops.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">For Loops</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,32 +260,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#strings" id="toc-strings" class="nav-link active" data-scroll-target="#strings"><span class="header-section-number">3.1</span> Strings</a></li>
-  <li><a href="#floats-and-integers" id="toc-floats-and-integers" class="nav-link" data-scroll-target="#floats-and-integers"><span class="header-section-number">3.2</span> Floats and Integers</a></li>
-  <li><a href="#boolean" id="toc-boolean" class="nav-link" data-scroll-target="#boolean"><span class="header-section-number">3.3</span> Boolean</a></li>
-  <li><a href="#none" id="toc-none" class="nav-link" data-scroll-target="#none"><span class="header-section-number">3.4</span> None</a></li>
-  <li><a href="#about-variables" id="toc-about-variables" class="nav-link" data-scroll-target="#about-variables"><span class="header-section-number">3.5</span> About variables</a></li>
+  <li><a href="#iterators" id="toc-iterators" class="nav-link active" data-scroll-target="#iterators"><span class="header-section-number">9.1</span> Iterators</a></li>
+  <li><a href="#looping-over-iterators" id="toc-looping-over-iterators" class="nav-link" data-scroll-target="#looping-over-iterators"><span class="header-section-number">9.2</span> Looping over iterators</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html">Basics</a></li><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_Loops/00_ForLoops.html">Loops</a></li><li class="breadcrumb-item"><a href="../03_Loops/00_ForLoops.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">For Loops</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">For Loops</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Zafer Kosar </p>
-          </div>
-  </div>
     
   
     
@@ -251,106 +287,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>A variable is used as shortcut for a <strong>value</strong>. Python has some fundamental variable types to hold distinct type of values.</p>
-<p>The most notable of these fundamental variable types are;</p>
-<section id="strings" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="strings"><span class="header-section-number">3.1</span> Strings</h2>
-<p><strong>Strings</strong> ,that are denoted by type <code>str</code> in python, used to hold <em>string</em> of characters.</p>
-<div id="cell-5" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">"Zafer Kosar the First of his name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="floats-and-integers" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="floats-and-integers"><span class="header-section-number">3.2</span> Floats and Integers</h2>
-<p><strong>Numeric</strong> variables <code>float</code> for floating point numbers (decimal numbers) and <code>int</code> for integers (whole numbers).</p>
-<div id="cell-8" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>number_of_my_friends <span class="op">=</span> <span class="dv">12</span> <span class="co"># I can't have a 0.35 friend.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(number_of_my_friends) <span class="co"># this will output the type of the variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Loops are used to iterate over a collection of elements such as list, arrays, tuples etc., or to iterate over an <strong>iterator</strong> object.</p>
+<section id="iterators" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="iterators"><span class="header-section-number">9.1</span> Iterators</h2>
+<p>Maybe the most used iterator in Python is from <code>range()</code> function. This function will return an iterator that begins at zero (or at the given number) up to <strong>end</strong> number inclusively. Unlike lists they store values one-by-one rather than all at the same time.</p>
+<p>To first visualize what it produces we can convert a <code>range</code> object into a <code>list</code>.</p>
+<div id="cell-5" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)) <span class="co">#start=1 and stop=11, start is included but stop is not included.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>int</code></pre>
+<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
 </div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_height_in_meters <span class="op">=</span> <span class="fl">1.84</span> <span class="co"># Some variables require floating point numbers</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(my_height_in_meters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>if you only input one value, that value will be treated as stop value. Start is by default <code>0</code> and this is more useful than starting from <code>1</code> as indexes start from <code>0</code>.</p>
+<div id="cell-7" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>float</code></pre>
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7]</code></pre>
 </div>
 </div>
-</section>
-<section id="boolean" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="boolean"><span class="header-section-number">3.3</span> Boolean</h2>
-<p><strong>Logic</strong> based variables holds <code>True</code> or <code>False</code> <strong>boolean</strong> values denoted by <code>bool</code>. They can be used to assess equality of values and variables. They are very useful to check whether the <strong>conditions</strong> are satisfied, thus control the flow of the code.</p>
-<p>As single equal sign <code>=</code> is reserved for assignment of value to variable. Double equal <code>==</code> sign is used for comparison.</p>
-<p>An example comparison that will output <code>False</code>;</p>
-<div id="cell-14" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Increment value is by default <code>1</code> but can be changed by adding a third parameter</p>
+<div id="cell-9" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>False</code></pre>
-</div>
-</div>
-<p>Also, variables can be used for comparison;</p>
-<div id="cell-16" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>my_height_in_meters <span class="op">==</span> my_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>False</code></pre>
-</div>
-</div>
-<p>As for the <code>type</code> of this assessment;</p>
-<div id="cell-18" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(my_height_in_meters <span class="op">==</span> my_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>bool</code></pre>
-</div>
-</div>
-<p>An example that will output <code>True</code>;</p>
-<div id="cell-20" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">==</span> <span class="fl">2.0</span> <span class="co"># ! Important Note here: Unlike some other languages, in Python float 2 (2.0) is equal to int 2 (2).</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>True</code></pre>
-</div>
-</div>
-<p>As expected</p>
-<div id="cell-22" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="dv">2</span>) <span class="op">==</span> <span class="bu">type</span>(<span class="fl">2.0</span>) <span class="co"># int vs float</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>False</code></pre>
+<pre><code>[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]</code></pre>
 </div>
 </div>
 </section>
-<section id="none" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="none"><span class="header-section-number">3.4</span> None</h2>
-<p><code>None</code>,as the name suggests, is used for denoting that there is no value assigned to the variable. Note that it is different from not being defined at all.</p>
-<p>We haven’t talked about the functions yet. But, let’s declare a simple function named <code>simple_function()</code> which returns <strong>nothing</strong>.</p>
-<div id="cell-26" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simple_function():</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-27" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> simple_function()</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>NoneType</code></pre>
-</div>
-</div>
-<p>We can also declare a variable with a value of <code>None</code> to make it <code>NoneType</code>.</p>
-<div id="cell-29" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>NoneType</code></pre>
+<section id="looping-over-iterators" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="looping-over-iterators"><span class="header-section-number">9.2</span> Looping over iterators</h2>
+<p>Similar to <code>if</code> blocks, <code>for</code> loop block starts with <code>for</code> followed by an <code>in</code> <strong>iterable</strong> and ends with <code>:</code>. Following lines within the for block must start with a <strong>tab</strong>.</p>
+<div id="cell-12" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4</code></pre>
 </div>
 </div>
-</section>
-<section id="about-variables" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="about-variables"><span class="header-section-number">3.5</span> About variables</h2>
-<p>Variable names <strong>must not</strong> start with a number and <strong>must not</strong> include special characters except for underscore “_”. Python uses <em>snake case</em> convention which states variable names (and each word in a variable name) <strong>should</strong> start with a lowercase letter and each word should be seperated by an underscore ‘_’.</p>
-<p>Python is a <strong>dynamically typed</strong> language. So, variables types will be inferred by the interpreter. Although this makes Python a slower compared to <strong>statically typed</strong> languages (e.g., C, Rust, Java etc.,), it makes Python beginner friendly also reduces the development time.</p>
-<div id="cell-33" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>num_samples : <span class="bu">int</span> <span class="op">=</span> <span class="dv">33</span> <span class="co"># static typing</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>num_samples <span class="op">=</span> <span class="st">"33"</span> <span class="co"># dynamic typing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Although Python allows static typing (aka type hinting), it is <strong>not required</strong> and interpreter <strong>ignores</strong> it. However, they may be useful for the programmer to keep track of their variables.</p>
 
 
 </section>
@@ -778,13 +754,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../00_Installation/01_Libraries.html" class="pagination-link" aria-label="Installing Third Party Libraries">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Third Party Libraries</span></span>
+      <a href="../02_Conditionals/01_IfConditionals.html" class="pagination-link" aria-label="If conditionals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../01_Basics/01_Lists.html" class="pagination-link" aria-label="Lists">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lists</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../03_Loops/01_WhileLoops.html" class="pagination-link" aria-label="01_WhileLoops.html">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

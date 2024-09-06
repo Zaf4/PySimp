@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zafer Kosar">
 
-<title>5&nbsp; Tuples – PySimp</title>
+<title>2&nbsp; Installing Third Party Libraries – PySimp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../01_Basics/03_Dictionaries.html" rel="next">
-<link href="../01_Basics/01_Lists.html" rel="prev">
+<link href="../01_Basics/00_Variables.html" rel="next">
+<link href="../00_Installation/00_Python.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html">Basics</a></li><li class="breadcrumb-item"><a href="../01_Basics/02_Tuples.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tuples</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../00_Installation/00_Python.html">Installation</a></li><li class="breadcrumb-item"><a href="../00_Installation/01_Libraries.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Third Party Libraries</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -129,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../00_Installation/01_Libraries.html" class="sidebar-item-text sidebar-link">
+  <a href="../00_Installation/01_Libraries.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Third Party Libraries</span></span></a>
   </div>
 </li>
@@ -158,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../01_Basics/02_Tuples.html" class="sidebar-item-text sidebar-link active">
+  <a href="../01_Basics/02_Tuples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tuples</span></span></a>
   </div>
 </li>
@@ -166,6 +201,52 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../01_Basics/03_Dictionaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dictionaries</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Conditionals</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_Conditionals/00_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Operators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Loops</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_Loops/00_ForLoops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">For Loops</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
   </div>
 </li>
       </ul>
@@ -180,22 +261,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#todo" id="toc-todo" class="nav-link active" data-scroll-target="#todo"><span class="header-section-number">5.1</span> todo</a></li>
+  <li><a href="#pip" id="toc-pip" class="nav-link active" data-scroll-target="#pip"><span class="header-section-number">2.1</span> pip</a>
+  <ul class="collapse">
+  <li><a href="#installing-libraries-on-notebook" id="toc-installing-libraries-on-notebook" class="nav-link" data-scroll-target="#installing-libraries-on-notebook"><span class="header-section-number">2.1.1</span> Installing Libraries on Notebook</a></li>
+  <li><a href="#installing-without-admin-priviliges" id="toc-installing-without-admin-priviliges" class="nav-link" data-scroll-target="#installing-without-admin-priviliges"><span class="header-section-number">2.1.2</span> Installing without admin priviliges</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_Basics/00_Variables.html">Basics</a></li><li class="breadcrumb-item"><a href="../01_Basics/02_Tuples.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tuples</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../00_Installation/00_Python.html">Installation</a></li><li class="breadcrumb-item"><a href="../00_Installation/01_Libraries.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Third Party Libraries</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tuples</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing Third Party Libraries</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zafer Kosar </p>
+          </div>
+  </div>
     
   
     
@@ -206,10 +297,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="todo" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">5.1</span> todo</h2>
+<p>Effective use of Python requires many third party libraries (packages). Most prominently <code>numpy</code> is used for working with arrays, <code>pandas</code> or <code>polars</code> for tabular data, <code>scipy</code> contains scientific algorithms etc., These third party libraries make Python very attractive as they solve the <strong>speed problem</strong> of Python while utilizing the ease-of-use of Python.</p>
+<section id="pip" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="pip"><span class="header-section-number">2.1</span> pip</h2>
+<p>To install third party libraries, we can use <code>pip</code> installer that comes built-in with Python installation. We add <code>install</code> <strong>flag</strong> for installation to declare our purpose. Lastly, <code>install</code> flag requires a parameter which is the library name e.g., <code>numpy</code>. Shortly, we can open a <strong>terminal window</strong> and write the following.</p>
+<pre class="shell"><code>pip install numpy</code></pre>
+<p>This will directly install <code>numpy</code> from PyPi, the public repository of Python, to your Python packages.</p>
+<p>! Note That in some cases <code>pip3</code> is used instead of <code>pip</code></p>
+<section id="installing-libraries-on-notebook" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="installing-libraries-on-notebook"><span class="header-section-number">2.1.1</span> Installing Libraries on Notebook</h3>
+<p>In some cases you may want to or have to install libraries inside of a Jupyter Notebook or Notebook in general. In such cases, just add <strong>exclammation mark</strong> “!” or <strong>percentage sign</strong> “%” before <code>pip</code>.</p>
+<div id="cell-9" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="installing-without-admin-priviliges" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="installing-without-admin-priviliges"><span class="header-section-number">2.1.2</span> Installing without admin priviliges</h3>
+<p>If you’re working on an HPC or something similar you may not have admin priviliges. Therefore, you may not have to access to main folder of Python packages. As a work-around you can add <code>--user</code> flag to install the packages to your own packages.</p>
+<pre class="shell"><code>pip install numpy --user</code></pre>
+<p>Above Python 3.10 installation defaults to user, so you don’t need the <code>--user</code> flag.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -635,13 +744,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../01_Basics/01_Lists.html" class="pagination-link" aria-label="Lists">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lists</span></span>
+      <a href="../00_Installation/00_Python.html" class="pagination-link" aria-label="Installing python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../01_Basics/03_Dictionaries.html" class="pagination-link" aria-label="Dictionaries">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dictionaries</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../01_Basics/00_Variables.html" class="pagination-link" aria-label="Variables">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

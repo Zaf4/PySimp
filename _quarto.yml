@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: BOOK 
 
 book:
   title: "PySimp"
@@ -17,8 +18,15 @@ book:
         - 01_Basics/01_Lists.ipynb
         - 01_Basics/02_Tuples.ipynb
         - 01_Basics/03_Dictionaries.ipynb
+    - part: Conditionals
+      chapters:
+        - 02_Conditionals/00_Operators.ipynb
+        - 02_Conditionals/01_IfConditionals.ipynb
+    - part: Loops
+      chapters:
+        - 03_Loops/00_ForLoops.ipynb
+        - 03_Loops/01_WhileLoops.ipynb
 
-bibliography: references.bib
 
 format:
   html:

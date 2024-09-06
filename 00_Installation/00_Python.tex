@@ -834,6 +834,415 @@ Or you can get them in reverse order, basically reversing the list
 
 \section{TODO}\label{todo-1}
 
+\part{Conditionals}
+
+\chapter{Operators}\label{operators}
+
+Conditionals is used for controlling the flow of code. Operators are
+useful to check if an \textbf{input} or a \textbf{result} satisfies a
+certain condition. Your code can change its course or behavior depending
+on the conditions. These operations will return a \texttt{bool} type
+value.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big }\OperatorTok{=} \DecValTok{5}
+\NormalTok{mid }\OperatorTok{=} \DecValTok{4}
+\NormalTok{small }\OperatorTok{=} \DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Greater than and Less than}\label{greater-than-and-less-than}
+
+Many of the operators in Python is similar to the mathematical notation.
+
+The operators \texttt{\textgreater{}} (greater than) and
+\texttt{\textless{}} (less than) are exactly the same.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big }\OperatorTok{\textgreater{}}\NormalTok{ small}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big }\OperatorTok{\textless{}}\NormalTok{ mid}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+\section{Equality}\label{equality}
+
+Equality checks requires double equal sign \texttt{==}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big }\OperatorTok{==}\NormalTok{ mid}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{small }\OperatorTok{==}\NormalTok{ small}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+There is also \textbf{not equal} to operator \texttt{!=}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big }\OperatorTok{!=}\NormalTok{ mid}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+\section{Not}\label{not}
+
+\texttt{not} keyword/operator can be used to invert \texttt{True} to
+\texttt{False} and vice versa.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{not} \VariableTok{True}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+\section{Chanining operations}\label{chanining-operations}
+
+Operators can also be chained via \texttt{and} and \texttt{or}.
+
+\texttt{and} requires all of the conditions to be satisfied.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(}\DecValTok{5}\OperatorTok{*}\DecValTok{1} \OperatorTok{==} \DecValTok{15}\OperatorTok{/}\DecValTok{3}\NormalTok{) }\KeywordTok{and}\NormalTok{ (}\DecValTok{5}\OperatorTok{*}\DecValTok{1} \OperatorTok{==} \DecValTok{10}\NormalTok{) }\CommentTok{\# second condition is not satisfied so this will reutrn False}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+With \texttt{or} it is sufficient that one of conditions to be
+\texttt{True} to return \texttt{True}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(}\DecValTok{5}\OperatorTok{*}\DecValTok{1} \OperatorTok{==} \DecValTok{15}\OperatorTok{/}\DecValTok{3}\NormalTok{) }\KeywordTok{or}\NormalTok{ (}\DecValTok{5}\OperatorTok{*}\DecValTok{1} \OperatorTok{==} \DecValTok{10}\NormalTok{) }\CommentTok{\# even though second condition is not satisfied, this will return True because first condition is satisfied.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+Of course, you can use many \texttt{or} and \texttt{and} and even
+parantheses \texttt{()} to create much more complicated logical
+comparisons. Order of priority is from left to right with parantheses
+first manner.
+
+\chapter{If conditionals}\label{if-conditionals}
+
+\section{If}\label{if}
+
+\texttt{if} keyword in Python let the interpreter \textbf{run} a piece
+of code \textbf{codeblock} when a requirement satisfied. This lets the
+program control the workflow depending on the previous results or
+inputs.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{input} \OperatorTok{=} \DecValTok{12} \CommentTok{\# just for simplicity}
+\NormalTok{input2 }\OperatorTok{=} \DecValTok{17} \CommentTok{\# just for simplicity again}
+\end{Highlighting}
+\end{Shaded}
+
+we will compare these input with the expected input.
+
+an \texttt{if} block starts with an \texttt{if} followed by a
+comparison. This first line must end with an \texttt{:}. the next line
+and any line within the \texttt{if} block should have a \emph{tab} (by
+convention 4 spaces) distance from the line start.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \BuiltInTok{input} \OperatorTok{==} \DecValTok{12}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hello World!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{12}\NormalTok{: }\CommentTok{\# input2 is not 12, so this will not print anything}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Elif}\label{elif}
+
+When we want to test for another set of conditions, we can use
+\texttt{elif} (short for else if).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{12}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{13}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World but 13!"}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{15}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World but 15!"}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{17}\NormalTok{: }\CommentTok{\# only this will print}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World but 17!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hello World but 17!
+\end{verbatim}
+
+\section{Else}\label{else}
+
+When you want to execute a piece of code when no other condition is
+satisfied you can simply use \texttt{else}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{12}\NormalTok{: }
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}
+\ControlFlowTok{elif}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{13}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World but 13!"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{: }\CommentTok{\# only this will print}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World but no prior conditions satisfied!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hello World but no prior conditions satisfied!
+\end{verbatim}
+
+\section{Chaining Conditions}\label{chaining-conditions}
+
+It is possible to chain conditions with \texttt{and} and \texttt{or}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \BuiltInTok{input} \OperatorTok{==} \DecValTok{12} \KeywordTok{and}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{17}\NormalTok{: }\CommentTok{\# both conditions must be true}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World! Both conditions satisfied!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hello World! Both conditions satisfied!
+\end{verbatim}
+
+Another example with \texttt{or}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \BuiltInTok{input} \OperatorTok{==} \DecValTok{17} \KeywordTok{or}\NormalTok{ input2 }\OperatorTok{==} \DecValTok{17}\NormalTok{: }\CommentTok{\# only second condition is True}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello World! One or both conditions satisfied!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Hello World! One or both conditions satisfied!
+\end{verbatim}
+
+\section{Nested Conditions}\label{nested-conditions}
+
+An if-else code block can be inside another if-else block which can be
+inside another if-else block and so on. This modularity enables
+programmer to program complex workflow with their codes.
+
+First, let's define an Arthur person for a follow up nested condition
+demonstration.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age\_arthur }\OperatorTok{=} \DecValTok{23}
+\NormalTok{height\_aurthur }\OperatorTok{=} \DecValTok{187}
+\NormalTok{weight\_arthur }\OperatorTok{=} \DecValTok{88}
+\NormalTok{name\_arthur }\OperatorTok{=} \StringTok{"Arthur"}
+\NormalTok{gender\_arthur }\OperatorTok{=} \StringTok{"male"}
+\NormalTok{hobby\_arthur }\OperatorTok{=} \VariableTok{None}
+\NormalTok{royal\_blood\_index\_arthur }\OperatorTok{=} \FloatTok{0.7}
+\NormalTok{is\_arthur\_king }\OperatorTok{=} \VariableTok{False}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{is\_arthur\_king}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+Now, let's see if we can crown him as the king\ldots{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# if is\_arthur\_king == True is the same as below since is\_arthur\_king is already a boolean}
+\ControlFlowTok{if}\NormalTok{ is\_arthur\_king: }
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Arthur is already a king! Cannot crown him again!"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \ControlFlowTok{if}\NormalTok{ gender\_arthur }\OperatorTok{!=}\StringTok{"male"}\NormalTok{: }\CommentTok{\# if he is not male}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Cannot be a king without being male"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{: }\CommentTok{\# if he is male}
+        \ControlFlowTok{if}\NormalTok{ age\_arthur }\OperatorTok{\textless{}} \DecValTok{18}\NormalTok{: }\CommentTok{\# check if he is old enough}
+            \BuiltInTok{print}\NormalTok{(}\StringTok{"Cannot be a king without being old enough"}\NormalTok{)}
+        \ControlFlowTok{else}\NormalTok{: }\CommentTok{\# if he is old enough}
+            \ControlFlowTok{if}\NormalTok{ royal\_blood\_index\_arthur }\OperatorTok{\textless{}} \FloatTok{0.5}\NormalTok{: }\CommentTok{\# check if he has enough royal blood}
+                \BuiltInTok{print}\NormalTok{(}\StringTok{"Cannot be a king without enough royal blood"}\NormalTok{)}
+            \ControlFlowTok{else}\NormalTok{: }\CommentTok{\# if he has enough royal blood}
+                \ControlFlowTok{if}\NormalTok{ height\_aurthur }\OperatorTok{\textless{}} \DecValTok{180} \KeywordTok{or}\NormalTok{ weight\_arthur }\OperatorTok{\textless{}} \DecValTok{80}\NormalTok{: }\CommentTok{\# check if he is big enough}
+                    \BuiltInTok{print}\NormalTok{(}\StringTok{"Cannot be a king without being huge enough"}\NormalTok{)}
+                \ControlFlowTok{else}\NormalTok{: }\CommentTok{\# if he is tall and heavy enough}
+                    \ControlFlowTok{if}\NormalTok{ hobby\_arthur }\KeywordTok{is} \KeywordTok{not} \VariableTok{None}\NormalTok{:}
+                        \BuiltInTok{print}\NormalTok{(}\StringTok{"Cannot be a king with a hobby, Kings don\textquotesingle{}t have time for hobbies"}\NormalTok{)}
+                    \ControlFlowTok{else}\NormalTok{:}
+                        \BuiltInTok{print}\NormalTok{(}\StringTok{"Long live the King Arthur!"}\NormalTok{)}
+\NormalTok{                        is\_arthur\_king }\OperatorTok{=} \VariableTok{True} \CommentTok{\# now he is a king and we can update his status}
+
+                
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Long live the King Arthur!
+\end{verbatim}
+
+Now, let's see if Arthur is a King now!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{is\_arthur\_king}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+We used nested (one within another) if-else blocks to check multiple
+scenarios. This is of course a made up example and can be simplified
+with \texttt{and} and \texttt{or} operators. But for real life cases you
+may encounter a problem in which you will have to use nested conditions
+to control flow of logic.
+
+With this we arrive to the conclusion we should crown him King and
+executed the command via the assigment
+\texttt{is\_arthur\_king\ =\ True} This assigment here is a simple
+command. But we could have much more complex operations or combinations
+of operations to execute.
+
+\part{Loops}
+
+\chapter{For Loops}\label{for-loops}
+
+Loops are used to iterate over a collection of elements such as list,
+arrays, tuples etc., or to iterate over an \textbf{iterator} object.
+
+\section{Iterators}\label{iterators}
+
+Maybe the most used iterator in Python is from \texttt{range()}
+function. This function will return an iterator that begins at zero (or
+at the given number) up to \textbf{end} number inclusively. Unlike lists
+they store values one-by-one rather than all at the same time.
+
+To first visualize what it produces we can convert a \texttt{range}
+object into a \texttt{list}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{list}\NormalTok{(}\BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{11}\NormalTok{)) }\CommentTok{\#start=1 and stop=11, start is included but stop is not included.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+\end{verbatim}
+
+if you only input one value, that value will be treated as stop value.
+Start is by default \texttt{0} and this is more useful than starting
+from \texttt{1} as indexes start from \texttt{0}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{list}\NormalTok{(}\BuiltInTok{range}\NormalTok{(}\DecValTok{8}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[0, 1, 2, 3, 4, 5, 6, 7]
+\end{verbatim}
+
+Increment value is by default \texttt{1} but can be changed by adding a
+third parameter
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{list}\NormalTok{(}\BuiltInTok{range}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+\end{verbatim}
+
+\section{Looping over iterators}\label{looping-over-iterators}
+
+Similar to \texttt{if} blocks, \texttt{for} loop block starts with
+\texttt{for} followed by an \texttt{in} \textbf{iterable} and ends with
+\texttt{:}. Following lines within the for block must start with a
+\textbf{tab}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(i)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+0
+1
+2
+3
+4
+\end{verbatim}
+
+\chapter{}\label{section}
+
 
 
 
