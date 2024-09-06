@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "PySimp"
+  author: "Zafer Kosar"
+  date: "06/09/2024"
+  chapters:
+    - index.qmd
+    - part: Installation
+      chapters:
+        - 00_Installation/00_Python.ipynb
+        - 00_Installation/01_Libraries.ipynb
+    - part: Basics
+      chapters:
+        - 01_Basics/00_Variables.ipynb
+        - 01_Basics/01_Lists.ipynb
+        - 01_Basics/02_Tuples.ipynb
+        - 01_Basics/03_Dictionaries.ipynb
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt

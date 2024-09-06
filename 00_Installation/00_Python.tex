@@ -1,0 +1,840 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={PySimp},
+  pdfauthor={Zafer Kosar},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{PySimp}
+\author{Zafer Kosar}
+\date{2024-06-09}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+This is a Quarto book.
+
+To learn more about Quarto books visit
+\url{https://quarto.org/docs/books}.
+
+\part{Installation}
+
+\chapter{Installing python}\label{installing-python}
+
+It is suggested use panultimate (one before the latest) major release of
+Python. Python 3 is now the golden standard and major releases follow
+3.x.x convetion. So, if the latest release is \textbf{3.12.x}, use the
+\textbf{3.11.y}, y being the latest version, the reason being
+compatibility with 3rd party libraries takes some time. For this book,
+we will use Python 3.11.9.
+
+\section{Windows}\label{windows}
+
+On windows just go to https://www.python.org/downloads/ and scroll down
+to ``Python releases by version number:'' section and select a version
+to download. And continue with the installation.
+
+On the installation, click ``\textbf{Add python.exe to PATH}'' so you
+can use Python on your terminal.
+
+\section{Mac}\label{mac}
+
+On Mac just go to https://www.python.org/downloads/ and scroll down to
+``Python releases by version number:'' section and select a version to
+download. And continue with the installation.
+
+\chapter{Installing Third Party
+Libraries}\label{installing-third-party-libraries}
+
+Effective use of Python requires many third party libraries (packages).
+Most prominently \texttt{numpy} is used for working with arrays,
+\texttt{pandas} or \texttt{polars} for tabular data, \texttt{scipy}
+contains scientific algorithms etc., These third party libraries make
+Python very attractive as they solve the \textbf{speed problem} of
+Python while utilizing the ease-of-use of Python.
+
+\section{pip}\label{pip}
+
+To install third party libraries, we can use \texttt{pip} installer that
+comes built-in with Python installation. We add \texttt{install}
+\textbf{flag} for installation to declare our purpose. Lastly,
+\texttt{install} flag requires a parameter which is the library name
+e.g., \texttt{numpy}. Shortly, we can open a \textbf{terminal window}
+and write the following.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pip install numpy}
+\end{Highlighting}
+\end{Shaded}
+
+This will directly install \texttt{numpy} from PyPi, the public
+repository of Python, to your Python packages.
+
+! Note That in some cases \texttt{pip3} is used instead of \texttt{pip}
+
+\subsection{Installing Libraries on
+Notebook}\label{installing-libraries-on-notebook}
+
+In some cases you may want to or have to install libraries inside of a
+Jupyter Notebook or Notebook in general. In such cases, just add
+\textbf{exclammation mark} ``!'' or \textbf{percentage sign} ``\%''
+before \texttt{pip}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{\%}\NormalTok{pip install numpy}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Installing without admin
+priviliges}\label{installing-without-admin-priviliges}
+
+If you're working on an HPC or something similar you may not have admin
+priviliges. Therefore, you may not have to access to main folder of
+Python packages. As a work-around you can add \texttt{-\/-user} flag to
+install the packages to your own packages.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pip install numpy {-}{-}user}
+\end{Highlighting}
+\end{Shaded}
+
+Above Python 3.10 installation defaults to user, so you don't need the
+\texttt{-\/-user} flag.
+
+\part{Basics}
+
+\chapter{Variables}\label{variables}
+
+A variable is used as shortcut for a \textbf{value}. Python has some
+fundamental variable types to hold distinct type of values.
+
+The most notable of these fundamental variable types are;
+
+\section{Strings}\label{strings}
+
+\textbf{Strings} ,that are denoted by type \texttt{str} in python, used
+to hold \emph{string} of characters.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_name }\OperatorTok{=} \StringTok{"Zafer Kosar the First of his name"}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Floats and Integers}\label{floats-and-integers}
+
+\textbf{Numeric} variables \texttt{float} for floating point numbers
+(decimal numbers) and \texttt{int} for integers (whole numbers).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{number\_of\_my\_friends }\OperatorTok{=} \DecValTok{12} \CommentTok{\# I can\textquotesingle{}t have a 0.35 friend.}
+\BuiltInTok{type}\NormalTok{(number\_of\_my\_friends) }\CommentTok{\# this will output the type of the variable}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+int
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_height\_in\_meters }\OperatorTok{=} \FloatTok{1.84} \CommentTok{\# Some variables require floating point numbers}
+\BuiltInTok{type}\NormalTok{(my\_height\_in\_meters)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+float
+\end{verbatim}
+
+\section{Boolean}\label{boolean}
+
+\textbf{Logic} based variables holds \texttt{True} or \texttt{False}
+\textbf{boolean} values denoted by \texttt{bool}. They can be used to
+assess equality of values and variables. They are very useful to check
+whether the \textbf{conditions} are satisfied, thus control the flow of
+the code.
+
+As single equal sign \texttt{=} is reserved for assignment of value to
+variable. Double equal \texttt{==} sign is used for comparison.
+
+An example comparison that will output \texttt{False};
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \OperatorTok{==} \DecValTok{0}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+Also, variables can be used for comparison;
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_height\_in\_meters }\OperatorTok{==}\NormalTok{ my\_name}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+As for the \texttt{type} of this assessment;
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(my\_height\_in\_meters }\OperatorTok{==}\NormalTok{ my\_name)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+bool
+\end{verbatim}
+
+An example that will output \texttt{True};
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2} \OperatorTok{==} \FloatTok{2.0} \CommentTok{\# ! Important Note here: Unlike some other languages, in Python float 2 (2.0) is equal to int 2 (2).}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+True
+\end{verbatim}
+
+As expected
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\DecValTok{2}\NormalTok{) }\OperatorTok{==} \BuiltInTok{type}\NormalTok{(}\FloatTok{2.0}\NormalTok{) }\CommentTok{\# int vs float}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+False
+\end{verbatim}
+
+\section{None}\label{none}
+
+\texttt{None},as the name suggests, is used for denoting that there is
+no value assigned to the variable. Note that it is different from not
+being defined at all.
+
+We haven't talked about the functions yet. But, let's declare a simple
+function named \texttt{simple\_function()} which returns
+\textbf{nothing}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ simple\_function():}
+    \ControlFlowTok{return}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=}\NormalTok{ simple\_function()}
+\BuiltInTok{type}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+NoneType
+\end{verbatim}
+
+We can also declare a variable with a value of \texttt{None} to make it
+\texttt{NoneType}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y }\OperatorTok{=} \VariableTok{None}
+\BuiltInTok{type}\NormalTok{(y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+NoneType
+\end{verbatim}
+
+\section{About variables}\label{about-variables}
+
+Variable names \textbf{must not} start with a number and \textbf{must
+not} include special characters except for underscore ``\_''. Python
+uses \emph{snake case} convention which states variable names (and each
+word in a variable name) \textbf{should} start with a lowercase letter
+and each word should be seperated by an underscore `\_'.
+
+Python is a \textbf{dynamically typed} language. So, variables types
+will be inferred by the interpreter. Although this makes Python a slower
+compared to \textbf{statically typed} languages (e.g., C, Rust, Java
+etc.,), it makes Python beginner friendly also reduces the development
+time.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{num\_samples : }\BuiltInTok{int} \OperatorTok{=} \DecValTok{33} \CommentTok{\# static typing}
+\NormalTok{num\_samples }\OperatorTok{=} \StringTok{"33"} \CommentTok{\# dynamic typing}
+\end{Highlighting}
+\end{Shaded}
+
+Although Python allows static typing (aka type hinting), it is
+\textbf{not required} and interpreter \textbf{ignores} it. However, they
+may be useful for the programmer to keep track of their variables.
+
+\chapter{Lists}\label{lists}
+
+Lists are used to store mutable \textbf{sequence} or \textbf{collection}
+of values (or items).
+
+A list can be created with collection of values seperated by commas
+\texttt{,} and enclosed within \texttt{{[}{]}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ids }\OperatorTok{=}\NormalTok{ [}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{10}\NormalTok{]}
+\NormalTok{ids}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+\end{verbatim}
+
+\section{List methods}\label{list-methods}
+
+Items also can be appended to the \textbf{end} of the list with
+\texttt{append()} method of list object.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ids.append(}\DecValTok{11}\NormalTok{)}
+\NormalTok{ids}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+\end{verbatim}
+
+or they can also be appended to the beginning or any given (existing)
+index of a list via \texttt{insert()} method.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ids.insert(}\DecValTok{0}\NormalTok{, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{) }\CommentTok{\# at index 0, insert {-}1}
+\NormalTok{ids}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+\end{verbatim}
+
+It is possible to reverse a list via \texttt{reverse()} method.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ids.reverse()}
+\NormalTok{ids}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1]
+\end{verbatim}
+
+Any value in the list can also be removed via \texttt{remove()}. Note
+that, \texttt{remove()} only removes the first occurence of a value.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ids.remove(}\DecValTok{8}\NormalTok{)}
+\NormalTok{ids}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1]
+\end{verbatim}
+
+You can get the methods you can call upon a \textbf{list} using the
+\texttt{dir()} function
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{dir}\NormalTok{(}\BuiltInTok{list}\NormalTok{)[}\OperatorTok{{-}}\DecValTok{10}\NormalTok{:] }\CommentTok{\# [{-}10:] gives the last 10 elements of the list returned by dir()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['clear',
+ 'copy',
+ 'count',
+ 'extend',
+ 'index',
+ 'insert',
+ 'pop',
+ 'remove',
+ 'reverse',
+ 'sort']
+\end{verbatim}
+
+\section{Built-in Functions to use with
+lists}\label{built-in-functions-to-use-with-lists}
+
+Python has built-in \texttt{min()} and \texttt{max()} functions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{max}\NormalTok{(ids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+11
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{min}\NormalTok{(ids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+-1
+\end{verbatim}
+
+Summation of all elements in the list are also possible.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{sum}\NormalTok{(ids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+57
+\end{verbatim}
+
+and the number of elements (length) in a list can be accessed via
+\texttt{len()} function.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{len}\NormalTok{(ids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+12
+\end{verbatim}
+
+Note that, \texttt{min()}, \texttt{max()}, and \texttt{len()} are not
+\texttt{methods} for \texttt{list} \textbf{Class} and they can be used
+with other collections of items such as \textbf{tuples} and
+\textbf{arrays}.
+
+Lists objects have also be sorted via \texttt{sort()} method.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{random\_numbers }\OperatorTok{=}\NormalTok{ [}\DecValTok{5353}\NormalTok{, }\DecValTok{314235}\NormalTok{, }\DecValTok{353}\NormalTok{, }\DecValTok{9}\NormalTok{,}\OperatorTok{{-}}\DecValTok{12}\NormalTok{]}
+\NormalTok{random\_numbers.sort()}
+\NormalTok{random\_numbers}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[-12, 9, 353, 5353, 314235]
+\end{verbatim}
+
+Lists don't have to be collection of the same type values. \textbf{Any}
+Python object can be stored in a list including other lists.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed }\OperatorTok{=}\NormalTok{ [}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{ , }\DecValTok{100}\NormalTok{, }\VariableTok{True}\NormalTok{, }\VariableTok{False}\NormalTok{, ids, }\VariableTok{None}\NormalTok{, }\FloatTok{3.14}\NormalTok{, random\_numbers, }\StringTok{"d"}\NormalTok{, }\StringTok{"e"}\NormalTok{, }\StringTok{"f"}\NormalTok{]}
+\NormalTok{mixed}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['a',
+ 'b',
+ 'c',
+ 1,
+ 10,
+ 100,
+ True,
+ False,
+ [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],
+ None,
+ 3.14,
+ [-12, 9, 353, 5353, 314235],
+ 'd',
+ 'e',
+ 'f']
+\end{verbatim}
+
+Obiviously, you can not call \texttt{sort()}, \texttt{min()},
+\texttt{max()} or similar methods on a mixed list.
+
+\section{Indexing}\label{indexing}
+
+Like most programming languages index start from \texttt{0} in Python.
+And the index should put within \texttt{{[}{]}} next to the list name.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[}\DecValTok{0}\NormalTok{] }\CommentTok{\# this will return the first element of a list }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+'a'
+\end{verbatim}
+
+To access the last element in a list. You can use \texttt{-1} as the
+index. Or \texttt{-2}, \texttt{-3} so on as a way of starting from the
+end.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+'f'
+\end{verbatim}
+
+is equivalent to
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[}\BuiltInTok{len}\NormalTok{(mixed) }\OperatorTok{{-}} \DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+'f'
+\end{verbatim}
+
+\section{Slicing}\label{slicing}
+
+Let's say you want to get the first element on a list. You can use the
+\texttt{:5} (equivalent of \texttt{0:5}) for indexing that will return
+the first five elements.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[:}\DecValTok{5}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['a', 'b', 'c', 1, 10]
+\end{verbatim}
+
+Or you can get next 3 elements
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[}\DecValTok{5}\NormalTok{:}\DecValTok{8}\NormalTok{] }\CommentTok{\# will return the elements from index 5 to index 8, where 8 is not included.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[100, True, False]
+\end{verbatim}
+
+Or the last 5 elements
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[}\OperatorTok{{-}}\DecValTok{5}\NormalTok{:]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[3.14, [-12, 9, 353, 5353, 314235], 'd', 'e', 'f']
+\end{verbatim}
+
+Or you might want the every second element. You can use the \texttt{::2}
+which means from \textbf{beginning to end} (\texttt{::}) every 2nd
+(\texttt{2}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[::}\DecValTok{2}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['a', 'c', 10, True, [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1], 3.14, 'd', 'f']
+\end{verbatim}
+
+Of course 2 can be changed with any number of your choosing.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[::}\DecValTok{5}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['a', 100, 3.14]
+\end{verbatim}
+
+Or you can get them in reverse order, basically reversing the list
+\texttt{::-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mixed[::}\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+['f',
+ 'e',
+ 'd',
+ [-12, 9, 353, 5353, 314235],
+ 3.14,
+ None,
+ [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],
+ False,
+ True,
+ 100,
+ 10,
+ 1,
+ 'c',
+ 'b',
+ 'a']
+\end{verbatim}
+
+\chapter{Tuples}\label{tuples}
+
+\section{todo}\label{todo}
+
+\chapter{Dictionaries}\label{dictionaries}
+
+\section{TODO}\label{todo-1}
+
+
+
+
+\end{document}
