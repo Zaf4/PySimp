@@ -30,6 +30,8 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: Cyborg
   pdf:
     documentclass: scrreprt
