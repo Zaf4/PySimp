@@ -1,0 +1,298 @@
+[
+  {
+    "objectID": "00_Installation/00_Python.html",
+    "href": "00_Installation/00_Python.html",
+    "title": "1  Installing python",
+    "section": "",
+    "text": "1.1 Windows\nOn windows just go to https://www.python.org/downloads/ and scroll down to “Python releases by version number:” section and select a version to download. And continue with the installation.\nOn the installation, click “Add python.exe to PATH” so you can use Python on your terminal.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing python</span>"
+    ]
+  },
+  {
+    "objectID": "00_Installation/00_Python.html#mac",
+    "href": "00_Installation/00_Python.html#mac",
+    "title": "1  Installing python",
+    "section": "1.2 Mac",
+    "text": "1.2 Mac\nOn Mac just go to https://www.python.org/downloads/ and scroll down to “Python releases by version number:” section and select a version to download. And continue with the installation.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing python</span>"
+    ]
+  },
+  {
+    "objectID": "00_Installation/01_Libraries.html",
+    "href": "00_Installation/01_Libraries.html",
+    "title": "2  Installing Third Party Libraries",
+    "section": "",
+    "text": "2.1 pip\nTo install third party libraries, we can use pip installer that comes built-in with Python installation. We add install flag for installation to declare our purpose. Lastly, install flag requires a parameter which is the library name e.g., numpy. Shortly, we can open a terminal window and write the following.\nThis will directly install numpy from PyPi, the public repository of Python, to your Python packages.\n! Note That in some cases pip3 is used instead of pip",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installing Third Party Libraries</span>"
+    ]
+  },
+  {
+    "objectID": "00_Installation/01_Libraries.html#pip",
+    "href": "00_Installation/01_Libraries.html#pip",
+    "title": "2  Installing Third Party Libraries",
+    "section": "",
+    "text": "pip install numpy\n\n\n\n2.1.1 Installing Libraries on Notebook\nIn some cases you may want to or have to install libraries inside of a Jupyter Notebook or Notebook in general. In such cases, just add exclammation mark “!” or percentage sign “%” before pip.\n\n%pip install numpy\n\n\n\n2.1.2 Installing without admin priviliges\nIf you’re working on an HPC or something similar you may not have admin priviliges. Therefore, you may not have to access to main folder of Python packages. As a work-around you can add --user flag to install the packages to your own packages.\npip install numpy --user\nAbove Python 3.10 installation defaults to user, so you don’t need the --user flag.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installing Third Party Libraries</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/00_Variables.html",
+    "href": "01_Basics/00_Variables.html",
+    "title": "3  Variables",
+    "section": "",
+    "text": "3.1 Strings\nStrings ,that are denoted by type str in python, used to hold string of characters.\nmy_name = \"Zafer Kosar the First of his name\"",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/00_Variables.html#floats-and-integers",
+    "href": "01_Basics/00_Variables.html#floats-and-integers",
+    "title": "3  Variables",
+    "section": "3.2 Floats and Integers",
+    "text": "3.2 Floats and Integers\nNumeric variables float for floating point numbers (decimal numbers) and int for integers (whole numbers).\n\nnumber_of_my_friends = 12 # I can't have a 0.35 friend.\ntype(number_of_my_friends) # this will output the type of the variable\n\nint\n\n\n\nmy_height_in_meters = 1.84 # Some variables require floating point numbers\ntype(my_height_in_meters)\n\nfloat",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/00_Variables.html#boolean",
+    "href": "01_Basics/00_Variables.html#boolean",
+    "title": "3  Variables",
+    "section": "3.3 Boolean",
+    "text": "3.3 Boolean\nLogic based variables holds True or False boolean values denoted by bool. They can be used to assess equality of values and variables. They are very useful to check whether the conditions are satisfied, thus control the flow of the code.\nAs single equal sign = is reserved for assignment of value to variable. Double equal == sign is used for comparison.\nAn example comparison that will output False;\n\n1 == 0\n\nFalse\n\n\nAlso, variables can be used for comparison;\n\nmy_height_in_meters == my_name\n\nFalse\n\n\nAs for the type of this assessment;\n\ntype(my_height_in_meters == my_name)\n\nbool\n\n\nAn example that will output True;\n\n2 == 2.0 # ! Important Note here: Unlike some other languages, in Python float 2 (2.0) is equal to int 2 (2).\n\nTrue\n\n\nAs expected\n\ntype(2) == type(2.0) # int vs float\n\nFalse",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/00_Variables.html#none",
+    "href": "01_Basics/00_Variables.html#none",
+    "title": "3  Variables",
+    "section": "3.4 None",
+    "text": "3.4 None\nNone,as the name suggests, is used for denoting that there is no value assigned to the variable. Note that it is different from not being defined at all.\nWe haven’t talked about the functions yet. But, let’s declare a simple function named simple_function() which returns nothing.\n\ndef simple_function():\n    return\n\n\nx = simple_function()\ntype(x)\n\nNoneType\n\n\nWe can also declare a variable with a value of None to make it NoneType.\n\ny = None\ntype(y)\n\nNoneType",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/00_Variables.html#about-variables",
+    "href": "01_Basics/00_Variables.html#about-variables",
+    "title": "3  Variables",
+    "section": "3.5 About variables",
+    "text": "3.5 About variables\nVariable names must not start with a number and must not include special characters except for underscore “_”. Python uses snake case convention which states variable names (and each word in a variable name) should start with a lowercase letter and each word should be seperated by an underscore ‘_’.\nPython is a dynamically typed language. So, variables types will be inferred by the interpreter. Although this makes Python a slower compared to statically typed languages (e.g., C, Rust, Java etc.,), it makes Python beginner friendly also reduces the development time.\n\nnum_samples : int = 33 # static typing\nnum_samples = \"33\" # dynamic typing\n\nAlthough Python allows static typing (aka type hinting), it is not required and interpreter ignores it. However, they may be useful for the programmer to keep track of their variables.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/01_Lists.html",
+    "href": "01_Basics/01_Lists.html",
+    "title": "4  Lists",
+    "section": "",
+    "text": "4.1 List methods\nItems also can be appended to the end of the list with append() method of list object.\nids.append(11)\nids\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nor they can also be appended to the beginning or any given (existing) index of a list via insert() method.\nids.insert(0, -1) # at index 0, insert -1\nids\n\n[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nIt is possible to reverse a list via reverse() method.\nids.reverse()\nids\n\n[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1]\nAny value in the list can also be removed via remove(). Note that, remove() only removes the first occurence of a value.\nids.remove(8)\nids\n\n[11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1]\nYou can get the methods you can call upon a list using the dir() function\ndir(list)[-10:] # [-10:] gives the last 10 elements of the list returned by dir()\n\n['clear',\n 'copy',\n 'count',\n 'extend',\n 'index',\n 'insert',\n 'pop',\n 'remove',\n 'reverse',\n 'sort']",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/01_Lists.html#built-in-functions-to-use-with-lists",
+    "href": "01_Basics/01_Lists.html#built-in-functions-to-use-with-lists",
+    "title": "4  Lists",
+    "section": "4.2 Built-in Functions to use with lists",
+    "text": "4.2 Built-in Functions to use with lists\nPython has built-in min() and max() functions.\n\nmax(ids)\n\n11\n\n\n\nmin(ids)\n\n-1\n\n\nSummation of all elements in the list are also possible.\n\nsum(ids)\n\n57\n\n\nand the number of elements (length) in a list can be accessed via len() function.\n\nlen(ids)\n\n12\n\n\nNote that, min(), max(), and len() are not methods for list Class and they can be used with other collections of items such as tuples and arrays.\nLists objects have also be sorted via sort() method.\n\nrandom_numbers = [5353, 314235, 353, 9,-12]\nrandom_numbers.sort()\nrandom_numbers\n\n[-12, 9, 353, 5353, 314235]\n\n\nLists don’t have to be collection of the same type values. Any Python object can be stored in a list including other lists.\n\nmixed = [\"a\", \"b\", \"c\", 1, 10 , 100, True, False, ids, None, 3.14, random_numbers, \"d\", \"e\", \"f\"]\nmixed\n\n['a',\n 'b',\n 'c',\n 1,\n 10,\n 100,\n True,\n False,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n None,\n 3.14,\n [-12, 9, 353, 5353, 314235],\n 'd',\n 'e',\n 'f']\n\n\nObiviously, you can not call sort(), min(), max() or similar methods on a mixed list.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/01_Lists.html#indexing",
+    "href": "01_Basics/01_Lists.html#indexing",
+    "title": "4  Lists",
+    "section": "4.3 Indexing",
+    "text": "4.3 Indexing\nLike most programming languages index start from 0 in Python. And the index should put within [] next to the list name.\n\nmixed[0] # this will return the first element of a list \n\n'a'\n\n\nTo access the last element in a list. You can use -1 as the index. Or -2, -3 so on as a way of starting from the end.\n\nmixed[-1]\n\n'f'\n\n\nis equivalent to\n\nmixed[len(mixed) - 1]\n\n'f'",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/01_Lists.html#slicing",
+    "href": "01_Basics/01_Lists.html#slicing",
+    "title": "4  Lists",
+    "section": "4.4 Slicing",
+    "text": "4.4 Slicing\nLet’s say you want to get the first element on a list. You can use the :5 (equivalent of 0:5) for indexing that will return the first five elements.\n\nmixed[:5]\n\n['a', 'b', 'c', 1, 10]\n\n\nOr you can get next 3 elements\n\nmixed[5:8] # will return the elements from index 5 to index 8, where 8 is not included.\n\n[100, True, False]\n\n\nOr the last 5 elements\n\nmixed[-5:]\n\n[3.14, [-12, 9, 353, 5353, 314235], 'd', 'e', 'f']\n\n\nOr you might want the every second element. You can use the ::2 which means from beginning to end (::) every 2nd (2).\n\nmixed[::2]\n\n['a', 'c', 10, True, [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1], 3.14, 'd', 'f']\n\n\nOf course 2 can be changed with any number of your choosing.\n\nmixed[::5]\n\n['a', 100, 3.14]\n\n\nOr you can get them in reverse order, basically reversing the list ::-1\n\nmixed[::-1]\n\n['f',\n 'e',\n 'd',\n [-12, 9, 353, 5353, 314235],\n 3.14,\n None,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n False,\n True,\n 100,\n 10,\n 1,\n 'c',\n 'b',\n 'a']",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/02_Tuples.html",
+    "href": "01_Basics/02_Tuples.html",
+    "title": "5  Tuples",
+    "section": "",
+    "text": "5.1 todo",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tuples</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/03_Dictionaries.html",
+    "href": "01_Basics/03_Dictionaries.html",
+    "title": "6  Dictionaries",
+    "section": "",
+    "text": "6.1 TODO",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Dictionaries</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/00_Operators.html",
+    "href": "02_Conditionals/00_Operators.html",
+    "title": "7  Operators",
+    "section": "",
+    "text": "7.1 Greater than and Less than\nMany of the operators in Python is similar to the mathematical notation.\nThe operators &gt; (greater than) and &lt; (less than) are exactly the same.\nbig &gt; small\n\nTrue\nbig &lt; mid\n\nFalse",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Operators</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/00_Operators.html#equality",
+    "href": "02_Conditionals/00_Operators.html#equality",
+    "title": "7  Operators",
+    "section": "7.2 Equality",
+    "text": "7.2 Equality\nEquality checks requires double equal sign ==.\n\nbig == mid\n\nFalse\n\n\n\nsmall == small\n\nTrue\n\n\nThere is also not equal to operator !=\n\nbig != mid\n\nTrue",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Operators</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/00_Operators.html#not",
+    "href": "02_Conditionals/00_Operators.html#not",
+    "title": "7  Operators",
+    "section": "7.3 Not",
+    "text": "7.3 Not\nnot keyword/operator can be used to invert True to False and vice versa.\n\nnot True\n\nFalse",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Operators</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/00_Operators.html#chanining-operations",
+    "href": "02_Conditionals/00_Operators.html#chanining-operations",
+    "title": "7  Operators",
+    "section": "7.4 Chanining operations",
+    "text": "7.4 Chanining operations\nOperators can also be chained via and and or.\nand requires all of the conditions to be satisfied.\n\n(5*1 == 15/3) and (5*1 == 10) # second condition is not satisfied so this will reutrn False\n\nFalse\n\n\nWith or it is sufficient that one of conditions to be True to return True.\n\n(5*1 == 15/3) or (5*1 == 10) # even though second condition is not satisfied, this will return True because first condition is satisfied.\n\nTrue\n\n\nOf course, you can use many or and and and even parantheses () to create much more complicated logical comparisons. Order of priority is from left to right with parantheses first manner.",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Operators</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/01_IfConditionals.html",
+    "href": "02_Conditionals/01_IfConditionals.html",
+    "title": "8  If conditionals",
+    "section": "",
+    "text": "8.1 If\nif keyword in Python let the interpreter run a piece of code codeblock when a requirement satisfied. This lets the program control the workflow depending on the previous results or inputs.\ninput = 12 # just for simplicity\ninput2 = 17 # just for simplicity again\nwe will compare these input with the expected input.\nan if block starts with an if followed by a comparison. This first line must end with an :. the next line and any line within the if block should have a tab (by convention 4 spaces) distance from the line start.\nif input == 12:\n    print(\"Hello World!\")\n\nHello World!\nif input2 == 12: # input2 is not 12, so this will not print anything\n    print(\"Hello World!\")",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/01_IfConditionals.html#elif",
+    "href": "02_Conditionals/01_IfConditionals.html#elif",
+    "title": "8  If conditionals",
+    "section": "8.2 Elif",
+    "text": "8.2 Elif\nWhen we want to test for another set of conditions, we can use elif (short for else if).\n\nif input2 == 12:\n    print(\"Hello World!\")\nelif input2 == 13:\n    print(\"Hello World but 13!\")\nelif input2 == 15:\n    print(\"Hello World but 15!\")\nelif input2 == 17: # only this will print\n    print(\"Hello World but 17!\")\n\nHello World but 17!",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/01_IfConditionals.html#else",
+    "href": "02_Conditionals/01_IfConditionals.html#else",
+    "title": "8  If conditionals",
+    "section": "8.3 Else",
+    "text": "8.3 Else\nWhen you want to execute a piece of code when no other condition is satisfied you can simply use else.\n\nif input2 == 12: \n    print(\"Hello World!\")\nelif input2 == 13:\n    print(\"Hello World but 13!\")\nelse: # only this will print\n    print(\"Hello World but no prior conditions satisfied!\")\n\nHello World but no prior conditions satisfied!",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/01_IfConditionals.html#chaining-conditions",
+    "href": "02_Conditionals/01_IfConditionals.html#chaining-conditions",
+    "title": "8  If conditionals",
+    "section": "8.4 Chaining Conditions",
+    "text": "8.4 Chaining Conditions\nIt is possible to chain conditions with and and or.\n\nif input == 12 and input2 == 17: # both conditions must be true\n    print(\"Hello World! Both conditions satisfied!\")\n\nHello World! Both conditions satisfied!\n\n\nAnother example with or\n\nif input == 17 or input2 == 17: # only second condition is True\n    print(\"Hello World! One or both conditions satisfied!\")\n\nHello World! One or both conditions satisfied!",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+    ]
+  },
+  {
+    "objectID": "02_Conditionals/01_IfConditionals.html#nested-conditions",
+    "href": "02_Conditionals/01_IfConditionals.html#nested-conditions",
+    "title": "8  If conditionals",
+    "section": "8.5 Nested Conditions",
+    "text": "8.5 Nested Conditions\nAn if-else code block can be inside another if-else block which can be inside another if-else block and so on. This modularity enables programmer to program complex workflow with their codes.\nFirst, let’s define an Arthur person for a follow up nested condition demonstration.\n\nage_arthur = 23\nheight_aurthur = 187\nweight_arthur = 88\nname_arthur = \"Arthur\"\ngender_arthur = \"male\"\nhobby_arthur = None\nroyal_blood_index_arthur = 0.7\nis_arthur_king = False\n\n\nis_arthur_king\n\nFalse\n\n\nNow, let’s see if we can crown him as the king…\n\n# if is_arthur_king == True is the same as below since is_arthur_king is already a boolean\nif is_arthur_king: \n    print(\"Arthur is already a king! Cannot crown him again!\")\nelse:\n    if gender_arthur !=\"male\": # if he is not male\n        print(\"Cannot be a king without being male\")\n    else: # if he is male\n        if age_arthur &lt; 18: # check if he is old enough\n            print(\"Cannot be a king without being old enough\")\n        else: # if he is old enough\n            if royal_blood_index_arthur &lt; 0.5: # check if he has enough royal blood\n                print(\"Cannot be a king without enough royal blood\")\n            else: # if he has enough royal blood\n                if height_aurthur &lt; 180 or weight_arthur &lt; 80: # check if he is big enough\n                    print(\"Cannot be a king without being huge enough\")\n                else: # if he is tall and heavy enough\n                    if hobby_arthur is not None:\n                        print(\"Cannot be a king with a hobby, Kings don't have time for hobbies\")\n                    else:\n                        print(\"Long live the King Arthur!\")\n                        is_arthur_king = True # now he is a king and we can update his status\n\n                \n\nLong live the King Arthur!\n\n\nNow, let’s see if Arthur is a King now!\n\nis_arthur_king\n\nTrue\n\n\nWe used nested (one within another) if-else blocks to check multiple scenarios. This is of course a made up example and can be simplified with and and or operators. But for real life cases you may encounter a problem in which you will have to use nested conditions to control flow of logic.\nWith this we arrive to the conclusion we should crown him King and executed the command via the assigment is_arthur_king = True This assigment here is a simple command. But we could have much more complex operations or combinations of operations to execute.",
+    "crumbs": [
+      "Conditionals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+    ]
+  },
+  {
+    "objectID": "03_Loops/00_ForLoops.html",
+    "href": "03_Loops/00_ForLoops.html",
+    "title": "9  For Loops",
+    "section": "",
+    "text": "9.1 Iterators\nMaybe the most used iterator in Python is from range() function. This function will return an iterator that begins at zero (or at the given number) up to end number inclusively. Unlike lists they store values one-by-one rather than all at the same time.\nTo first visualize what it produces we can convert a range object into a list.\nlist(range(1, 11)) #start=1 and stop=11, start is included but stop is not included.\n\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nif you only input one value, that value will be treated as stop value. Start is by default 0 and this is more useful than starting from 1 as indexes start from 0.\nlist(range(8))\n\n[0, 1, 2, 3, 4, 5, 6, 7]\nIncrement value is by default 1 but can be changed by adding a third parameter\nlist(range(0, 100, 10))\n\n[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]",
+    "crumbs": [
+      "Loops",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>For Loops</span>"
+    ]
+  },
+  {
+    "objectID": "03_Loops/00_ForLoops.html#looping-over-iterators",
+    "href": "03_Loops/00_ForLoops.html#looping-over-iterators",
+    "title": "9  For Loops",
+    "section": "9.2 Looping over iterators",
+    "text": "9.2 Looping over iterators\nSimilar to if blocks, for loop block starts with for followed by an in iterable and ends with :. Following lines within the for block must start with a tab.\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4",
+    "crumbs": [
+      "Loops",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>For Loops</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PySimp",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  }
+]
