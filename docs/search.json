@@ -2,23 +2,23 @@
   {
     "objectID": "00_Installation/00_Python.html",
     "href": "00_Installation/00_Python.html",
-    "title": "1  Installing python",
+    "title": "1  Installing Python",
     "section": "",
     "text": "1.1 Windows\nOn windows just go to https://www.python.org/downloads/ and scroll down to “Python releases by version number:” section and select a version to download. And continue with the installation.\nOn the installation, click “Add python.exe to PATH” so you can use Python on your terminal.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing python</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Python</span>"
     ]
   },
   {
     "objectID": "00_Installation/00_Python.html#mac",
     "href": "00_Installation/00_Python.html#mac",
-    "title": "1  Installing python",
+    "title": "1  Installing Python",
     "section": "1.2 Mac",
     "text": "1.2 Mac\nOn Mac just go to https://www.python.org/downloads/ and scroll down to “Python releases by version number:” section and select a version to download. And continue with the installation.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing python</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installing Python</span>"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "href": "00_Installation/01_Libraries.html",
     "title": "2  Installing Third Party Libraries",
     "section": "",
-    "text": "2.1 pip\nTo install third party libraries, we can use pip installer that comes built-in with Python installation. We add install flag for installation to declare our purpose. Lastly, install flag requires a parameter which is the library name e.g., numpy. Shortly, we can open a terminal window and write the following.\nThis will directly install numpy from PyPi, the public repository of Python, to your Python packages.\n! Note That in some cases pip3 is used instead of pip",
+    "text": "2.1 pip\nTo install third party libraries, we can use pip installer that comes built-in with Python installation. We add install flag for installation to declare our purpose. Lastly, install flag requires a parameter which is the library name e.g., numpy. Shortly, we can open a terminal or shell window and write the following.\nThis will directly install numpy from PyPi, the public repository of Python, to your Python packages.\n! Note That in some cases pip3 is used instead of pip",
     "crumbs": [
       "Installation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installing Third Party Libraries</span>"
@@ -103,7 +103,18 @@
     "href": "01_Basics/01_Lists.html",
     "title": "4  Lists",
     "section": "",
-    "text": "4.1 List methods\nItems also can be appended to the end of the list with append() method of list object.\nids.append(11)\nids\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nor they can also be appended to the beginning or any given (existing) index of a list via insert() method.\nids.insert(0, -1) # at index 0, insert -1\nids\n\n[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nIt is possible to reverse a list via reverse() method.\nids.reverse()\nids\n\n[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1]\nAny value in the list can also be removed via remove(). Note that, remove() only removes the first occurence of a value.\nids.remove(8)\nids\n\n[11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1]\nYou can get the methods you can call upon a list using the dir() function\ndir(list)[-10:] # [-10:] gives the last 10 elements of the list returned by dir()\n\n['clear',\n 'copy',\n 'count',\n 'extend',\n 'index',\n 'insert',\n 'pop',\n 'remove',\n 'reverse',\n 'sort']",
+    "text": "4.1 Representation\nA list can be created with collection of values seperated by commas , and enclosed within []\nids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nids\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/01_Lists.html#list-methods",
+    "href": "01_Basics/01_Lists.html#list-methods",
+    "title": "4  Lists",
+    "section": "4.2 List methods",
+    "text": "4.2 List methods\nItems also can be appended to the end of the list with append() method of list object.\n\nids.append(11)\nids\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n\n\nor they can also be appended to the beginning or any given (existing) index of a list via insert() method.\n\nids.insert(0, -1) # at index 0, insert -1\nids\n\n[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n\n\nIt is possible to reverse a list via reverse() method.\n\nids.reverse()\nids\n\n[11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1]\n\n\nAny value in the list can also be removed via remove(). Note that, remove() only removes the first occurence of a value.\n\nids.remove(8)\nids\n\n[11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1]\n\n\nYou can get the methods you can call upon a list using the dir() function\n\ndir(list)[-10:] # [-10:] gives the last 10 elements of the list returned by dir()\n\n['clear',\n 'copy',\n 'count',\n 'extend',\n 'index',\n 'insert',\n 'pop',\n 'remove',\n 'reverse',\n 'sort']",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
@@ -113,8 +124,8 @@
     "objectID": "01_Basics/01_Lists.html#built-in-functions-to-use-with-lists",
     "href": "01_Basics/01_Lists.html#built-in-functions-to-use-with-lists",
     "title": "4  Lists",
-    "section": "4.2 Built-in Functions to use with lists",
-    "text": "4.2 Built-in Functions to use with lists\nPython has built-in min() and max() functions.\n\nmax(ids)\n\n11\n\n\n\nmin(ids)\n\n-1\n\n\nSummation of all elements in the list are also possible.\n\nsum(ids)\n\n57\n\n\nand the number of elements (length) in a list can be accessed via len() function.\n\nlen(ids)\n\n12\n\n\nNote that, min(), max(), and len() are not methods for list Class and they can be used with other collections of items such as tuples and arrays.\nLists objects have also be sorted via sort() method.\n\nrandom_numbers = [5353, 314235, 353, 9,-12]\nrandom_numbers.sort()\nrandom_numbers\n\n[-12, 9, 353, 5353, 314235]\n\n\nLists don’t have to be collection of the same type values. Any Python object can be stored in a list including other lists.\n\nmixed = [\"a\", \"b\", \"c\", 1, 10 , 100, True, False, ids, None, 3.14, random_numbers, \"d\", \"e\", \"f\"]\nmixed\n\n['a',\n 'b',\n 'c',\n 1,\n 10,\n 100,\n True,\n False,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n None,\n 3.14,\n [-12, 9, 353, 5353, 314235],\n 'd',\n 'e',\n 'f']\n\n\nObiviously, you can not call sort(), min(), max() or similar methods on a mixed list.",
+    "section": "4.3 Built-in Functions to use with lists",
+    "text": "4.3 Built-in Functions to use with lists\nPython has built-in min() and max() functions.\n\nmax(ids)\n\n11\n\n\n\nmin(ids)\n\n-1\n\n\nSummation of all elements in the list are also possible.\n\nsum(ids)\n\n57\n\n\nand the number of elements (length) in a list can be accessed via len() function.\n\nlen(ids)\n\n12\n\n\nNote that, min(), max(), and len() are not methods for list Class and they can be used with other collections of items such as tuples and arrays.\nLists objects have also be sorted via sort() method.\n\nrandom_numbers = [5353, 314235, 353, 9,-12]\nrandom_numbers.sort()\nrandom_numbers\n\n[-12, 9, 353, 5353, 314235]\n\n\nLists don’t have to be collection of the same type values. Any Python object can be stored in a list including other lists.\n\nmixed = [\"a\", \"b\", \"c\", 1, 10 , 100, True, False, ids, None, 3.14, random_numbers, \"d\", \"e\", \"f\"]\nmixed\n\n['a',\n 'b',\n 'c',\n 1,\n 10,\n 100,\n True,\n False,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n None,\n 3.14,\n [-12, 9, 353, 5353, 314235],\n 'd',\n 'e',\n 'f']\n\n\nObiviously, you can not call sort(), min(), max() or similar methods on a mixed list.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
@@ -124,8 +135,8 @@
     "objectID": "01_Basics/01_Lists.html#indexing",
     "href": "01_Basics/01_Lists.html#indexing",
     "title": "4  Lists",
-    "section": "4.3 Indexing",
-    "text": "4.3 Indexing\nLike most programming languages index start from 0 in Python. And the index should put within [] next to the list name.\n\nmixed[0] # this will return the first element of a list \n\n'a'\n\n\nTo access the last element in a list. You can use -1 as the index. Or -2, -3 so on as a way of starting from the end.\n\nmixed[-1]\n\n'f'\n\n\nis equivalent to\n\nmixed[len(mixed) - 1]\n\n'f'",
+    "section": "4.4 Indexing",
+    "text": "4.4 Indexing\nLike most programming languages index start from 0 in Python. And the index should put within [] next to the list name.\n\nmixed[0] # this will return the first element of a list \n\n'a'\n\n\nTo access the last element in a list. You can use -1 as the index. Or -2, -3 so on as a way of starting from the end.\n\nmixed[-1]\n\n'f'\n\n\nis equivalent to\n\nmixed[len(mixed) - 1]\n\n'f'",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
@@ -135,8 +146,8 @@
     "objectID": "01_Basics/01_Lists.html#slicing",
     "href": "01_Basics/01_Lists.html#slicing",
     "title": "4  Lists",
-    "section": "4.4 Slicing",
-    "text": "4.4 Slicing\nLet’s say you want to get the first element on a list. You can use the :5 (equivalent of 0:5) for indexing that will return the first five elements.\n\nmixed[:5]\n\n['a', 'b', 'c', 1, 10]\n\n\nOr you can get next 3 elements\n\nmixed[5:8] # will return the elements from index 5 to index 8, where 8 is not included.\n\n[100, True, False]\n\n\nOr the last 5 elements\n\nmixed[-5:]\n\n[3.14, [-12, 9, 353, 5353, 314235], 'd', 'e', 'f']\n\n\nOr you might want the every second element. You can use the ::2 which means from beginning to end (::) every 2nd (2).\n\nmixed[::2]\n\n['a', 'c', 10, True, [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1], 3.14, 'd', 'f']\n\n\nOf course 2 can be changed with any number of your choosing.\n\nmixed[::5]\n\n['a', 100, 3.14]\n\n\nOr you can get them in reverse order, basically reversing the list ::-1\n\nmixed[::-1]\n\n['f',\n 'e',\n 'd',\n [-12, 9, 353, 5353, 314235],\n 3.14,\n None,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n False,\n True,\n 100,\n 10,\n 1,\n 'c',\n 'b',\n 'a']",
+    "section": "4.5 Slicing",
+    "text": "4.5 Slicing\nLet’s say you want to get the first element on a list. You can use the :5 (equivalent of 0:5) for indexing that will return the first five elements.\n\nmixed[:5]\n\n['a', 'b', 'c', 1, 10]\n\n\nOr you can get next 3 elements\n\nmixed[5:8] # will return the elements from index 5 to index 8, where 8 is not included.\n\n[100, True, False]\n\n\nOr the last 5 elements\n\nmixed[-5:]\n\n[3.14, [-12, 9, 353, 5353, 314235], 'd', 'e', 'f']\n\n\nOr you might want the every second element. You can use the ::2 which means from beginning to end (::) every 2nd (2).\n\nmixed[::2]\n\n['a', 'c', 10, True, [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1], 3.14, 'd', 'f']\n\n\nOf course 2 can be changed with any number of your choosing.\n\nmixed[::5]\n\n['a', 100, 3.14]\n\n\nOr you can get them in reverse order, basically reversing the list ::-1\n\nmixed[::-1]\n\n['f',\n 'e',\n 'd',\n [-12, 9, 353, 5353, 314235],\n 3.14,\n None,\n [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1],\n False,\n True,\n 100,\n 10,\n 1,\n 'c',\n 'b',\n 'a']",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lists</span>"
@@ -147,7 +158,40 @@
     "href": "01_Basics/02_Tuples.html",
     "title": "5  Tuples",
     "section": "",
-    "text": "5.1 todo",
+    "text": "5.1 Representation\nTuples are very similar to lists in the sense that they represent sequence of values and support multiple types in the same sequence. But instead of [] they are enclosed within ().\nseq = (1, 2, \"hello\")\ntype(seq)\n\ntuple\ntuples can also be declared without parantheses. However, using parantheses is the “concise” way and should be preferred when declaring tuples.\nseq2 = \"name\", 2, 3.14\ntype(seq2)\n\ntuple",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tuples</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/02_Tuples.html#immutability",
+    "href": "01_Basics/02_Tuples.html#immutability",
+    "title": "5  Tuples",
+    "section": "5.2 Immutability",
+    "text": "5.2 Immutability\nMaybe the most important distinction between the lists and tuples is that list elements can be reassigned values as lists are mutable, which simply states they are changble. However, once they are created tuples cannot be assigned new values nor the existing values can be reassigned due to the immutable nature of tuples.\n\nseq[1] = 0\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 seq[1] = 0\n\nTypeError: 'tuple' object does not support item assignment",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tuples</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/02_Tuples.html#unpacking-tuples",
+    "href": "01_Basics/02_Tuples.html#unpacking-tuples",
+    "title": "5  Tuples",
+    "section": "5.3 Unpacking Tuples",
+    "text": "5.3 Unpacking Tuples\nDeclaring multiple variables at the same time is just creating the tuple (on the right side) and unpacking the values to the left-side variable names.\n\na,b,c = 1,2,3 # equivalent to a,b,c = (1,2,3)\nprint(a,b,c)\nprint(type(a), type(b), type(c))\n\n1 2 3\n&lt;class 'int'&gt; &lt;class 'int'&gt; &lt;class 'int'&gt;\n\n\n\n5.3.1 Unmatched sizes\nWhat will happen if I try to assign 3 values to 2 variables?\n\na,b = 1,2,3\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[12], line 1\n----&gt; 1 a,b = 1,2,3\n\nValueError: too many values to unpack (expected 2)\n\n\n\nTo unpack first element to first variable and all the rest to second, you can use the * operator on the left side of the second variable name.\n\na, *b = 1, 2, 3\nprint(a, b)\nprint(type(a), type(b))\n\n1 [2, 3]\n&lt;class 'int'&gt; &lt;class 'list'&gt;\n\n\nSimply put a gets the first value 1 and b gets the remaining values as a list. Note that here b is a list type not a tuple type.\nYou can also assign the last element to the last variable and unpack the rest to b.\n\na, *b, c = 1, 2, 3, 4, 5\nprint(a,b,c)\n\n1 [2, 3, 4] 5\n\n\n\ntype(b)\n\nlist",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tuples</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/02_Tuples.html#functions",
+    "href": "01_Basics/02_Tuples.html#functions",
+    "title": "5  Tuples",
+    "section": "5.4 Functions",
+    "text": "5.4 Functions\nA Function also return a tuple in the cases it returns multiple values at the same time.\n\ndef multiply_and_sum(a, b):\n    product = a * b\n    sum = a + b\n    return product, sum\n\nwe will focus on functions very emphatatically later…\nThen, we can call the function with some values.\n\nresults = multiply_and_sum(3, 4)\nprint(results, type(results))\n\n(12, 7) &lt;class 'tuple'&gt;\n\n\nYou can, of course, use the unpacking logic to get individual values.\n\nproduct, sum = multiply_and_sum(3, 4)\nprint(product, sum)\n\n12 7",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tuples</span>"
@@ -158,7 +202,18 @@
     "href": "01_Basics/03_Dictionaries.html",
     "title": "6  Dictionaries",
     "section": "",
-    "text": "6.1 TODO",
+    "text": "6.1 Syntax\nDictionary (dict) is basically a collection of items with “keys” (left side) of str type and value (right side) of any type.\nheights = {'Peter': 1.76, 'Anna': 1.65, 'John': 1.80}\ntype(heights)\n\ndict",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Dictionaries</span>"
+    ]
+  },
+  {
+    "objectID": "01_Basics/03_Dictionaries.html#getting-an-element-from-a-dictionary",
+    "href": "01_Basics/03_Dictionaries.html#getting-an-element-from-a-dictionary",
+    "title": "6  Dictionaries",
+    "section": "6.2 Getting an element from a dictionary",
+    "text": "6.2 Getting an element from a dictionary\nUnlike lists or tuples, dictionaries are not ordered sequences. Therefore, you cannot retrive values by providing an index.\n\nheights[1]\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[6], line 1\n----&gt; 1 heights[1]\n\nKeyError: 1\n\n\n\nAs the KeyError makes it obvious dictionaries look for keys not indexes. Using a key, present in the dictionary, will work with the same syntax.\n\nheights[\"John\"]\n\n1.8\n\n\nHowever, to retrieve values for the keys, it is the better and suggested practice to use .get() method.\n\nheights.get(\"Peter\")\n\n1.76\n\n\nthis is a more concise and a rather “methodical” approach. As a principle, if the method exists, it should be preffered over other syntax.\nBut let’s say we don’t know the keys. You can simply use the keys() method.\n\nheights.keys()\n\ndict_keys(['Peter', 'Anna', 'John'])\n\n\nthis will also come handy in the Loops section of this book.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Dictionaries</span>"
@@ -211,56 +266,56 @@
   {
     "objectID": "02_Conditionals/01_IfConditionals.html",
     "href": "02_Conditionals/01_IfConditionals.html",
-    "title": "8  If conditionals",
+    "title": "8  If Conditionals",
     "section": "",
     "text": "8.1 If\nif keyword in Python let the interpreter run a piece of code codeblock when a requirement satisfied. This lets the program control the workflow depending on the previous results or inputs.\ninput = 12 # just for simplicity\ninput2 = 17 # just for simplicity again\nwe will compare these input with the expected input.\nan if block starts with an if followed by a comparison. This first line must end with an :. the next line and any line within the if block should have a tab (by convention 4 spaces) distance from the line start.\nif input == 12:\n    print(\"Hello World!\")\n\nHello World!\nif input2 == 12: # input2 is not 12, so this will not print anything\n    print(\"Hello World!\")",
     "crumbs": [
       "Conditionals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If Conditionals</span>"
     ]
   },
   {
     "objectID": "02_Conditionals/01_IfConditionals.html#elif",
     "href": "02_Conditionals/01_IfConditionals.html#elif",
-    "title": "8  If conditionals",
+    "title": "8  If Conditionals",
     "section": "8.2 Elif",
     "text": "8.2 Elif\nWhen we want to test for another set of conditions, we can use elif (short for else if).\n\nif input2 == 12:\n    print(\"Hello World!\")\nelif input2 == 13:\n    print(\"Hello World but 13!\")\nelif input2 == 15:\n    print(\"Hello World but 15!\")\nelif input2 == 17: # only this will print\n    print(\"Hello World but 17!\")\n\nHello World but 17!",
     "crumbs": [
       "Conditionals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If Conditionals</span>"
     ]
   },
   {
     "objectID": "02_Conditionals/01_IfConditionals.html#else",
     "href": "02_Conditionals/01_IfConditionals.html#else",
-    "title": "8  If conditionals",
+    "title": "8  If Conditionals",
     "section": "8.3 Else",
     "text": "8.3 Else\nWhen you want to execute a piece of code when no other condition is satisfied you can simply use else.\n\nif input2 == 12: \n    print(\"Hello World!\")\nelif input2 == 13:\n    print(\"Hello World but 13!\")\nelse: # only this will print\n    print(\"Hello World but no prior conditions satisfied!\")\n\nHello World but no prior conditions satisfied!",
     "crumbs": [
       "Conditionals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If Conditionals</span>"
     ]
   },
   {
     "objectID": "02_Conditionals/01_IfConditionals.html#chaining-conditions",
     "href": "02_Conditionals/01_IfConditionals.html#chaining-conditions",
-    "title": "8  If conditionals",
+    "title": "8  If Conditionals",
     "section": "8.4 Chaining Conditions",
     "text": "8.4 Chaining Conditions\nIt is possible to chain conditions with and and or.\n\nif input == 12 and input2 == 17: # both conditions must be true\n    print(\"Hello World! Both conditions satisfied!\")\n\nHello World! Both conditions satisfied!\n\n\nAnother example with or\n\nif input == 17 or input2 == 17: # only second condition is True\n    print(\"Hello World! One or both conditions satisfied!\")\n\nHello World! One or both conditions satisfied!",
     "crumbs": [
       "Conditionals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If Conditionals</span>"
     ]
   },
   {
     "objectID": "02_Conditionals/01_IfConditionals.html#nested-conditions",
     "href": "02_Conditionals/01_IfConditionals.html#nested-conditions",
-    "title": "8  If conditionals",
+    "title": "8  If Conditionals",
     "section": "8.5 Nested Conditions",
     "text": "8.5 Nested Conditions\nAn if-else code block can be inside another if-else block which can be inside another if-else block and so on. This modularity enables programmer to program complex workflow with their codes.\nFirst, let’s define an Arthur person for a follow up nested condition demonstration.\n\nage_arthur = 23\nheight_aurthur = 187\nweight_arthur = 88\nname_arthur = \"Arthur\"\ngender_arthur = \"male\"\nhobby_arthur = None\nroyal_blood_index_arthur = 0.7\nis_arthur_king = False\n\n\nis_arthur_king\n\nFalse\n\n\nNow, let’s see if we can crown him as the king…\n\n# if is_arthur_king == True is the same as below since is_arthur_king is already a boolean\nif is_arthur_king: \n    print(\"Arthur is already a king! Cannot crown him again!\")\nelse:\n    if gender_arthur !=\"male\": # if he is not male\n        print(\"Cannot be a king without being male\")\n    else: # if he is male\n        if age_arthur &lt; 18: # check if he is old enough\n            print(\"Cannot be a king without being old enough\")\n        else: # if he is old enough\n            if royal_blood_index_arthur &lt; 0.5: # check if he has enough royal blood\n                print(\"Cannot be a king without enough royal blood\")\n            else: # if he has enough royal blood\n                if height_aurthur &lt; 180 or weight_arthur &lt; 80: # check if he is big enough\n                    print(\"Cannot be a king without being huge enough\")\n                else: # if he is tall and heavy enough\n                    if hobby_arthur is not None:\n                        print(\"Cannot be a king with a hobby, Kings don't have time for hobbies\")\n                    else:\n                        print(\"Long live the King Arthur!\")\n                        is_arthur_king = True # now he is a king and we can update his status\n\n                \n\nLong live the King Arthur!\n\n\nNow, let’s see if Arthur is a King now!\n\nis_arthur_king\n\nTrue\n\n\nWe used nested (one within another) if-else blocks to check multiple scenarios. This is of course a made up example and can be simplified with and and or operators. But for real life cases you may encounter a problem in which you will have to use nested conditions to control flow of logic.\nWith this we arrive to the conclusion we should crown him King and executed the command via the assigment is_arthur_king = True This assigment here is a simple command. But we could have much more complex operations or combinations of operations to execute.",
     "crumbs": [
       "Conditionals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If conditionals</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>If Conditionals</span>"
     ]
   },
   {
@@ -268,7 +323,7 @@
     "href": "03_Loops/00_ForLoops.html",
     "title": "9  For Loops",
     "section": "",
-    "text": "9.1 Iterators\nMaybe the most used iterator in Python is from range() function. This function will return an iterator that begins at zero (or at the given number) up to end number inclusively. Unlike lists they store values one-by-one rather than all at the same time.\nTo first visualize what it produces we can convert a range object into a list.\nlist(range(1, 11)) #start=1 and stop=11, start is included but stop is not included.\n\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nif you only input one value, that value will be treated as stop value. Start is by default 0 and this is more useful than starting from 1 as indexes start from 0.\nlist(range(8))\n\n[0, 1, 2, 3, 4, 5, 6, 7]\nIncrement value is by default 1 but can be changed by adding a third parameter\nlist(range(0, 100, 10))\n\n[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]",
+    "text": "9.1 Iterators\nIterators, unlike iterables (list, tuples, dicts etc.), store values one-by-one rather than all at the same time. Maybe the most used iterator in Python is from range() function. This function will return an iterator that begins at zero (or at the given number inclusively) up to end number exclusively.\nTo first visualize what it produces we can convert a range object into a list.\nlist(range(1, 11)) #start=1 and stop=11, start is included but stop is not included.\n\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nif you only input one value, that value will be treated as stop value. Start is by default 0 and this is more useful than starting from 1 as indexes start from 0.\nlist(range(8))\n\n[0, 1, 2, 3, 4, 5, 6, 7]\nIncrement value is by default 1 but can be changed by adding a third parameter\nlist(range(0, 100, 10))\n\n[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]",
     "crumbs": [
       "Loops",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>For Loops</span>"
@@ -279,7 +334,18 @@
     "href": "03_Loops/00_ForLoops.html#looping-over-iterators",
     "title": "9  For Loops",
     "section": "9.2 Looping over iterators",
-    "text": "9.2 Looping over iterators\nSimilar to if blocks, for loop block starts with for followed by an in iterable and ends with :. Following lines within the for block must start with a tab.\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4",
+    "text": "9.2 Looping over iterators\nSimilar to if blocks, for loop block starts with for followed by an in iterable and ends with :. Following lines within the for block must start with a tab as per python indentation rules.\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4",
+    "crumbs": [
+      "Loops",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>For Loops</span>"
+    ]
+  },
+  {
+    "objectID": "03_Loops/00_ForLoops.html#looping-over-iterables",
+    "href": "03_Loops/00_ForLoops.html#looping-over-iterables",
+    "title": "9  For Loops",
+    "section": "9.3 Looping over iterables",
+    "text": "9.3 Looping over iterables\nFor loop in python is actually a “for each” loop. It iterates over every element of an iterable object until it reaches to the end of it. Therefore, any iterable can be iterated with a for loop.\n\n9.3.1 Lists\n\nnames = [\"King\", \"Queen\", \"Jack\", \"Ace\"]\nfor name in names: # take each \"name\" in the list of \"names\" one-by-one\n    print(name)\n\nKing\nQueen\nJack\nAce\n\n\nit is a common and good practice to use singular version of the list name as the indentor. Examples size in sizes, number in numbers etc.,\n\n\n9.3.2 Tuples\nBasically the same as the lists.\n\n\n9.3.3 Dictionaries\nLet’s create a dictionary first.\n\nIDs = {\n    \"London\": 113232,\n    \"Ankara\": 245296,\n    \"Sydney\": 3895349,\n}\n\nYou have two ways to iterate over a dictionary.\nFirst, in dict.keys()\n\nfor ID in IDs.keys():\n    print(ID,IDs.get(ID))\n\nLondon 113232\nAnkara 245296\nSydney 3895349\n\n\nOr simply in dict which is a less verbose and more popular way.\n\nfor ID in IDs:\n    print(ID, IDs.get(ID))\n\nLondon 113232\nAnkara 245296\nSydney 3895349\n\n\nNote that for loops are very crucial for python and we will be utilizing them working with arrays and dataframes as well.",
     "crumbs": [
       "Loops",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>For Loops</span>"
@@ -290,7 +356,7 @@
     "href": "index.html",
     "title": "PySimp",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface\nPySimp was designed to get you started with Python for data analysis without any bloat or unnecessary complexity.\nNo bloat, No boring details. Let’s get started!",
     "crumbs": [
       "Preface"
     ]

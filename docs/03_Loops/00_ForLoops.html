@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zafer Kosar">
 
 <title>9&nbsp; For Loops – PySimp</title>
 <style>
@@ -163,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../00_Installation/00_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing Python</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -227,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If Conditionals</span></span></a>
   </div>
 </li>
       </ul>
@@ -250,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">While Loops</span></span></a>
   </div>
 </li>
       </ul>
@@ -267,6 +268,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#iterators" id="toc-iterators" class="nav-link active" data-scroll-target="#iterators"><span class="header-section-number">9.1</span> Iterators</a></li>
   <li><a href="#looping-over-iterators" id="toc-looping-over-iterators" class="nav-link" data-scroll-target="#looping-over-iterators"><span class="header-section-number">9.2</span> Looping over iterators</a></li>
+  <li><a href="#looping-over-iterables" id="toc-looping-over-iterables" class="nav-link" data-scroll-target="#looping-over-iterables"><span class="header-section-number">9.3</span> Looping over iterables</a>
+  <ul class="collapse">
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">9.3.1</span> Lists</a></li>
+  <li><a href="#tuples" id="toc-tuples" class="nav-link" data-scroll-target="#tuples"><span class="header-section-number">9.3.2</span> Tuples</a></li>
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries"><span class="header-section-number">9.3.3</span> Dictionaries</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -282,6 +289,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zafer Kosar </p>
+          </div>
+  </div>
     
   
     
@@ -292,10 +305,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Loops are used to iterate over a collection of elements such as list, arrays, tuples etc., or to iterate over an <strong>iterator</strong> object.</p>
+<p>Loops are used to iterate over a collection of elements (iterables) such as list, arrays, tuples etc., or to iterate over an <strong>iterator</strong> object.</p>
 <section id="iterators" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="iterators"><span class="header-section-number">9.1</span> Iterators</h2>
-<p>Maybe the most used iterator in Python is from <code>range()</code> function. This function will return an iterator that begins at zero (or at the given number) up to <strong>end</strong> number inclusively. Unlike lists they store values one-by-one rather than all at the same time.</p>
+<p>Iterators, unlike iterables (list, tuples, dicts etc.), store values one-by-one rather than all at the same time. Maybe the most used iterator in Python is from <code>range()</code> function. This function will return an iterator that begins at zero (or at the given number inclusively) up to <strong>end</strong> number exclusively.</p>
 <p>To first visualize what it produces we can convert a <code>range</code> object into a <code>list</code>.</p>
 <div id="cell-5" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)) <span class="co">#start=1 and stop=11, start is included but stop is not included.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -320,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="looping-over-iterators" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="looping-over-iterators"><span class="header-section-number">9.2</span> Looping over iterators</h2>
-<p>Similar to <code>if</code> blocks, <code>for</code> loop block starts with <code>for</code> followed by an <code>in</code> <strong>iterable</strong> and ends with <code>:</code>. Following lines within the for block must start with a <strong>tab</strong>.</p>
+<p>Similar to <code>if</code> blocks, <code>for</code> loop block starts with <code>for</code> followed by an <code>in</code> <strong>iterable</strong> and ends with <code>:</code>. Following lines within the for block must start with a <strong>tab</strong> as per python indentation rules.</p>
 <div id="cell-12" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -332,8 +345,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4</code></pre>
 </div>
 </div>
+</section>
+<section id="looping-over-iterables" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="looping-over-iterables"><span class="header-section-number">9.3</span> Looping over iterables</h2>
+<p>For loop in python is actually a “for each” loop. It iterates over every element of an iterable object until it reaches to the end of it. Therefore, any iterable can be iterated with a for loop.</p>
+<section id="lists" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="lists"><span class="header-section-number">9.3.1</span> Lists</h3>
+<div id="cell-16" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"King"</span>, <span class="st">"Queen"</span>, <span class="st">"Jack"</span>, <span class="st">"Ace"</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names: <span class="co"># take each "name" in the list of "names" one-by-one</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>King
+Queen
+Jack
+Ace</code></pre>
+</div>
+</div>
+<p>it is a common and good practice to use singular version of the list name as the indentor. Examples <code>size in sizes</code>, <code>number in numbers</code> etc.,</p>
+</section>
+<section id="tuples" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="tuples"><span class="header-section-number">9.3.2</span> Tuples</h3>
+<p>Basically the same as the lists.</p>
+</section>
+<section id="dictionaries" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="dictionaries"><span class="header-section-number">9.3.3</span> Dictionaries</h3>
+<p>Let’s create a dictionary first.</p>
+<div id="cell-22" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>IDs <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"London"</span>: <span class="dv">113232</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ankara"</span>: <span class="dv">245296</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sydney"</span>: <span class="dv">3895349</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You have two ways to iterate over a dictionary.</p>
+<p>First, <code>in dict.keys()</code></p>
+<div id="cell-25" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ID <span class="kw">in</span> IDs.keys():</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ID,IDs.get(ID))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>London 113232
+Ankara 245296
+Sydney 3895349</code></pre>
+</div>
+</div>
+<p>Or simply <code>in dict</code> which is a less verbose and more popular way.</p>
+<div id="cell-27" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ID <span class="kw">in</span> IDs:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ID, IDs.get(ID))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>London 113232
+Ankara 245296
+Sydney 3895349</code></pre>
+</div>
+</div>
+<p>Note that for loops are very crucial for python and we will be utilizing them working with arrays and dataframes as well.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -903,13 +972,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../02_Conditionals/01_IfConditionals.html" class="pagination-link" aria-label="If conditionals">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span>
+      <a href="../02_Conditionals/01_IfConditionals.html" class="pagination-link" aria-label="If Conditionals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If Conditionals</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../03_Loops/01_WhileLoops.html" class="pagination-link" aria-label="01_WhileLoops.html">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../03_Loops/01_WhileLoops.html" class="pagination-link" aria-label="While Loops">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">While Loops</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

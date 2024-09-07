@@ -33,5 +33,5 @@ format:
     theme: 
       light: cosmo
       dark: Cyborg
-  pdf:
-    documentclass: scrreprt
+  # pdf:
+  #   documentclass: scrreprt

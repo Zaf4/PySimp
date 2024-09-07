@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../00_Installation/00_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing Python</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If Conditionals</span></span></a>
   </div>
 </li>
       </ul>
@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">While Loops</span></span></a>
   </div>
 </li>
       </ul>
@@ -266,10 +266,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#list-methods" id="toc-list-methods" class="nav-link active" data-scroll-target="#list-methods"><span class="header-section-number">4.1</span> List methods</a></li>
-  <li><a href="#built-in-functions-to-use-with-lists" id="toc-built-in-functions-to-use-with-lists" class="nav-link" data-scroll-target="#built-in-functions-to-use-with-lists"><span class="header-section-number">4.2</span> Built-in Functions to use with lists</a></li>
-  <li><a href="#indexing" id="toc-indexing" class="nav-link" data-scroll-target="#indexing"><span class="header-section-number">4.3</span> Indexing</a></li>
-  <li><a href="#slicing" id="toc-slicing" class="nav-link" data-scroll-target="#slicing"><span class="header-section-number">4.4</span> Slicing</a></li>
+  <li><a href="#representation" id="toc-representation" class="nav-link active" data-scroll-target="#representation"><span class="header-section-number">4.1</span> Representation</a></li>
+  <li><a href="#list-methods" id="toc-list-methods" class="nav-link" data-scroll-target="#list-methods"><span class="header-section-number">4.2</span> List methods</a></li>
+  <li><a href="#built-in-functions-to-use-with-lists" id="toc-built-in-functions-to-use-with-lists" class="nav-link" data-scroll-target="#built-in-functions-to-use-with-lists"><span class="header-section-number">4.3</span> Built-in Functions to use with lists</a></li>
+  <li><a href="#indexing" id="toc-indexing" class="nav-link" data-scroll-target="#indexing"><span class="header-section-number">4.4</span> Indexing</a></li>
+  <li><a href="#slicing" id="toc-slicing" class="nav-link" data-scroll-target="#slicing"><span class="header-section-number">4.5</span> Slicing</a></li>
   </ul>
 </nav>
     </div>
@@ -302,18 +303,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Lists are used to store mutable <strong>sequence</strong> or <strong>collection</strong> of values (or items).</p>
+<section id="representation" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="representation"><span class="header-section-number">4.1</span> Representation</h2>
 <p>A list can be created with collection of values seperated by commas <code>,</code> and enclosed within <code>[]</code></p>
-<div id="cell-3" class="cell" data-execution_count="1">
+<div id="cell-4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ids <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
 </div>
 </div>
-<section id="list-methods" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="list-methods"><span class="header-section-number">4.1</span> List methods</h2>
+</section>
+<section id="list-methods" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="list-methods"><span class="header-section-number">4.2</span> List methods</h2>
 <p>Items also can be appended to the <strong>end</strong> of the list with <code>append()</code> method of list object.</p>
-<div id="cell-6" class="cell" data-execution_count="2">
+<div id="cell-7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ids.append(<span class="dv">11</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -321,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>or they can also be appended to the beginning or any given (existing) index of a list via <code>insert()</code> method.</p>
-<div id="cell-8" class="cell" data-execution_count="3">
+<div id="cell-9" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ids.insert(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>) <span class="co"># at index 0, insert -1</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -329,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>It is possible to reverse a list via <code>reverse()</code> method.</p>
-<div id="cell-10" class="cell" data-execution_count="4">
+<div id="cell-11" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ids.reverse()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -337,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Any value in the list can also be removed via <code>remove()</code>. Note that, <code>remove()</code> only removes the first occurence of a value.</p>
-<div id="cell-12" class="cell" data-execution_count="5">
+<div id="cell-13" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ids.remove(<span class="dv">8</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -345,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>You can get the methods you can call upon a <strong>list</strong> using the <code>dir()</code> function</p>
-<div id="cell-14" class="cell" data-execution_count="23">
+<div id="cell-15" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(<span class="bu">list</span>)[<span class="op">-</span><span class="dv">10</span>:] <span class="co"># [-10:] gives the last 10 elements of the list returned by dir()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>['clear',
@@ -361,30 +365,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="built-in-functions-to-use-with-lists" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="built-in-functions-to-use-with-lists"><span class="header-section-number">4.2</span> Built-in Functions to use with lists</h2>
+<section id="built-in-functions-to-use-with-lists" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="built-in-functions-to-use-with-lists"><span class="header-section-number">4.3</span> Built-in Functions to use with lists</h2>
 <p>Python has built-in <code>min()</code> and <code>max()</code> functions.</p>
-<div id="cell-17" class="cell" data-execution_count="6">
+<div id="cell-18" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(ids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>11</code></pre>
 </div>
 </div>
-<div id="cell-18" class="cell" data-execution_count="7">
+<div id="cell-19" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span>(ids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>-1</code></pre>
 </div>
 </div>
 <p>Summation of all elements in the list are also possible.</p>
-<div id="cell-20" class="cell" data-execution_count="8">
+<div id="cell-21" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(ids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>57</code></pre>
 </div>
 </div>
 <p>and the number of elements (length) in a list can be accessed via <code>len()</code> function.</p>
-<div id="cell-22" class="cell" data-execution_count="9">
+<div id="cell-23" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(ids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>12</code></pre>
@@ -392,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Note that, <code>min()</code>, <code>max()</code>, and <code>len()</code> are not <code>methods</code> for <code>list</code> <strong>Class</strong> and they can be used with other collections of items such as <strong>tuples</strong> and <strong>arrays</strong>.</p>
 <p>Lists objects have also be sorted via <code>sort()</code> method.</p>
-<div id="cell-25" class="cell" data-execution_count="10">
+<div id="cell-26" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>random_numbers <span class="op">=</span> [<span class="dv">5353</span>, <span class="dv">314235</span>, <span class="dv">353</span>, <span class="dv">9</span>,<span class="op">-</span><span class="dv">12</span>]</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>random_numbers.sort()</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>random_numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -401,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Lists don’t have to be collection of the same type values. <strong>Any</strong> Python object can be stored in a list including other lists.</p>
-<div id="cell-27" class="cell" data-execution_count="11">
+<div id="cell-28" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>mixed <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="dv">1</span>, <span class="dv">10</span> , <span class="dv">100</span>, <span class="va">True</span>, <span class="va">False</span>, ids, <span class="va">None</span>, <span class="fl">3.14</span>, random_numbers, <span class="st">"d"</span>, <span class="st">"e"</span>, <span class="st">"f"</span>]</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>mixed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -424,69 +428,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Obiviously, you can not call <code>sort()</code>, <code>min()</code>, <code>max()</code> or similar methods on a mixed list.</p>
 </section>
-<section id="indexing" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="indexing"><span class="header-section-number">4.3</span> Indexing</h2>
+<section id="indexing" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="indexing"><span class="header-section-number">4.4</span> Indexing</h2>
 <p>Like most programming languages index start from <code>0</code> in Python. And the index should put within <code>[]</code> next to the list name.</p>
-<div id="cell-31" class="cell" data-execution_count="12">
+<div id="cell-32" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>mixed[<span class="dv">0</span>] <span class="co"># this will return the first element of a list </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>'a'</code></pre>
 </div>
 </div>
 <p>To access the last element in a list. You can use <code>-1</code> as the index. Or <code>-2</code>, <code>-3</code> so on as a way of starting from the end.</p>
-<div id="cell-33" class="cell" data-execution_count="13">
+<div id="cell-34" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>mixed[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>'f'</code></pre>
 </div>
 </div>
 <p>is equivalent to</p>
-<div id="cell-35" class="cell" data-execution_count="14">
+<div id="cell-36" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>mixed[<span class="bu">len</span>(mixed) <span class="op">-</span> <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>'f'</code></pre>
 </div>
 </div>
 </section>
-<section id="slicing" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="slicing"><span class="header-section-number">4.4</span> Slicing</h2>
+<section id="slicing" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="slicing"><span class="header-section-number">4.5</span> Slicing</h2>
 <p>Let’s say you want to get the first element on a list. You can use the <code>:5</code> (equivalent of <code>0:5</code>) for indexing that will return the first five elements.</p>
-<div id="cell-38" class="cell" data-execution_count="15">
+<div id="cell-39" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>mixed[:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>['a', 'b', 'c', 1, 10]</code></pre>
 </div>
 </div>
 <p>Or you can get next 3 elements</p>
-<div id="cell-40" class="cell" data-execution_count="16">
+<div id="cell-41" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>mixed[<span class="dv">5</span>:<span class="dv">8</span>] <span class="co"># will return the elements from index 5 to index 8, where 8 is not included.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>[100, True, False]</code></pre>
 </div>
 </div>
 <p>Or the last 5 elements</p>
-<div id="cell-42" class="cell" data-execution_count="17">
+<div id="cell-43" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>mixed[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>[3.14, [-12, 9, 353, 5353, 314235], 'd', 'e', 'f']</code></pre>
 </div>
 </div>
 <p>Or you might want the every second element. You can use the <code>::2</code> which means from <strong>beginning to end</strong> (<code>::</code>) every 2nd (<code>2</code>).</p>
-<div id="cell-44" class="cell" data-execution_count="18">
+<div id="cell-45" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>mixed[::<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>['a', 'c', 10, True, [11, 10, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1], 3.14, 'd', 'f']</code></pre>
 </div>
 </div>
 <p>Of course 2 can be changed with any number of your choosing.</p>
-<div id="cell-46" class="cell" data-execution_count="19">
+<div id="cell-47" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>mixed[::<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>['a', 100, 3.14]</code></pre>
 </div>
 </div>
 <p>Or you can get them in reverse order, basically reversing the list <code>::-1</code></p>
-<div id="cell-48" class="cell" data-execution_count="20">
+<div id="cell-49" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>mixed[::<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>['f',

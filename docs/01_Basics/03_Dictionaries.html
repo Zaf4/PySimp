@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zafer Kosar">
 
 <title>6&nbsp; Dictionaries – PySimp</title>
 <style>
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../00_Installation/00_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing Python</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -193,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If Conditionals</span></span></a>
   </div>
 </li>
       </ul>
@@ -216,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">While Loops</span></span></a>
   </div>
 </li>
       </ul>
@@ -231,7 +266,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#todo" id="toc-todo" class="nav-link active" data-scroll-target="#todo"><span class="header-section-number">6.1</span> TODO</a></li>
+  <li><a href="#syntax" id="toc-syntax" class="nav-link active" data-scroll-target="#syntax"><span class="header-section-number">6.1</span> Syntax</a></li>
+  <li><a href="#getting-an-element-from-a-dictionary" id="toc-getting-an-element-from-a-dictionary" class="nav-link" data-scroll-target="#getting-an-element-from-a-dictionary"><span class="header-section-number">6.2</span> Getting an element from a dictionary</a></li>
   </ul>
 </nav>
     </div>
@@ -247,6 +283,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zafer Kosar </p>
+          </div>
+  </div>
     
   
     
@@ -257,8 +299,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="todo" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">6.1</span> TODO</h2>
+<p>Dictionaries are used for storing <strong>key</strong>-<strong>value</strong> pairs. They are extremely useful in the scenarios where you have to map keys or names to values.</p>
+<section id="syntax" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="syntax"><span class="header-section-number">6.1</span> Syntax</h2>
+<p>Dictionary (<code>dict</code>) is basically a collection of items with “keys” (left side) of <code>str</code> type and value (right side) of any type.</p>
+<div id="cell-4" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>heights <span class="op">=</span> {<span class="st">'Peter'</span>: <span class="fl">1.76</span>, <span class="st">'Anna'</span>: <span class="fl">1.65</span>, <span class="st">'John'</span>: <span class="fl">1.80</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>dict</code></pre>
+</div>
+</div>
+</section>
+<section id="getting-an-element-from-a-dictionary" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="getting-an-element-from-a-dictionary"><span class="header-section-number">6.2</span> Getting an element from a dictionary</h2>
+<p>Unlike lists or tuples, dictionaries are not ordered sequences. Therefore, you cannot retrive values by providing an index.</p>
+<div id="cell-7" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>heights[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[6], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> <span class="ansi-yellow-bg">heights</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">1</span><span class="ansi-yellow-bg">]</span>
+
+<span class="ansi-red-fg ansi-bold">KeyError</span>: 1</pre>
+</div>
+</div>
+</div>
+<p>As the <code>KeyError</code> makes it obvious dictionaries look for <strong>keys</strong> not indexes. Using a key, present in the dictionary, will work with the same syntax.</p>
+<div id="cell-9" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>heights[<span class="st">"John"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>1.8</code></pre>
+</div>
+</div>
+<p>However, to retrieve values for the keys, it is the better and suggested practice to use <code>.get()</code> method.</p>
+<div id="cell-11" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>heights.get(<span class="st">"Peter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>1.76</code></pre>
+</div>
+</div>
+<p>this is a more concise and a rather “methodical” approach. As a principle, if the method exists, it should be preffered over other syntax.</p>
+<p>But let’s say we don’t know the keys. You can simply use the <code>keys()</code> method.</p>
+<div id="cell-14" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>heights.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>dict_keys(['Peter', 'Anna', 'John'])</code></pre>
+</div>
+</div>
+<p>this will also come handy in the <strong>Loops</strong> section of this book.</p>
 
 
 </section>

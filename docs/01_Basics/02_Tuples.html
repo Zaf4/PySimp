@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zafer Kosar">
 
 <title>5&nbsp; Tuples – PySimp</title>
 <style>
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../00_Installation/00_Python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing Python</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -193,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../02_Conditionals/01_IfConditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If conditionals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">If Conditionals</span></span></a>
   </div>
 </li>
       </ul>
@@ -216,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_Loops/01_WhileLoops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">01_WhileLoops.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">While Loops</span></span></a>
   </div>
 </li>
       </ul>
@@ -231,7 +266,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#todo" id="toc-todo" class="nav-link active" data-scroll-target="#todo"><span class="header-section-number">5.1</span> todo</a></li>
+  <li><a href="#representation" id="toc-representation" class="nav-link active" data-scroll-target="#representation"><span class="header-section-number">5.1</span> Representation</a></li>
+  <li><a href="#immutability" id="toc-immutability" class="nav-link" data-scroll-target="#immutability"><span class="header-section-number">5.2</span> Immutability</a></li>
+  <li><a href="#unpacking-tuples" id="toc-unpacking-tuples" class="nav-link" data-scroll-target="#unpacking-tuples"><span class="header-section-number">5.3</span> Unpacking Tuples</a>
+  <ul class="collapse">
+  <li><a href="#unmatched-sizes" id="toc-unmatched-sizes" class="nav-link" data-scroll-target="#unmatched-sizes"><span class="header-section-number">5.3.1</span> Unmatched sizes</a></li>
+  </ul></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">5.4</span> Functions</a></li>
   </ul>
 </nav>
     </div>
@@ -247,6 +288,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zafer Kosar </p>
+          </div>
+  </div>
     
   
     
@@ -257,8 +304,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="todo" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">5.1</span> todo</h2>
+<section id="representation" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="representation"><span class="header-section-number">5.1</span> Representation</h2>
+<p>Tuples are very similar to lists in the sense that they represent sequence of values and support multiple types in the same sequence. But instead of <code>[]</code> they are enclosed within <code>()</code>.</p>
+<div id="cell-3" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>seq <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"hello"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(seq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>tuple</code></pre>
+</div>
+</div>
+<p>tuples can also be declared without parantheses. However, using parantheses is the “concise” way and should be preferred when declaring tuples.</p>
+<div id="cell-5" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>seq2 <span class="op">=</span> <span class="st">"name"</span>, <span class="dv">2</span>, <span class="fl">3.14</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(seq2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>tuple</code></pre>
+</div>
+</div>
+</section>
+<section id="immutability" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="immutability"><span class="header-section-number">5.2</span> Immutability</h2>
+<p>Maybe the most important distinction between the lists and tuples is that list elements can be reassigned values as lists are <strong>mutable</strong>, which simply states they are changble. However, once they are created tuples cannot be assigned new values nor the existing values can be reassigned due to the <strong>immutable</strong> nature of tuples.</p>
+<div id="cell-8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>seq[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[2], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> <span class="ansi-yellow-bg">seq</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">1</span><span class="ansi-yellow-bg">]</span> <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">0</span>
+
+<span class="ansi-red-fg ansi-bold">TypeError</span>: 'tuple' object does not support item assignment</pre>
+</div>
+</div>
+</div>
+</section>
+<section id="unpacking-tuples" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="unpacking-tuples"><span class="header-section-number">5.3</span> Unpacking Tuples</h2>
+<p>Declaring multiple variables at the same time is just creating the tuple (on the right side) and <strong>unpacking</strong> the values to the left-side variable names.</p>
+<div id="cell-11" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a,b,c <span class="op">=</span> <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span> <span class="co"># equivalent to a,b,c = (1,2,3)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(a), <span class="bu">type</span>(b), <span class="bu">type</span>(c))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1 2 3
+&lt;class 'int'&gt; &lt;class 'int'&gt; &lt;class 'int'&gt;</code></pre>
+</div>
+</div>
+<section id="unmatched-sizes" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="unmatched-sizes"><span class="header-section-number">5.3.1</span> Unmatched sizes</h3>
+<p>What will happen if I try to assign 3 values to 2 variables?</p>
+<div id="cell-14" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a,b <span class="op">=</span> <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[12], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> a,b <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">1</span>,<span style="color:rgb(98,98,98)">2</span>,<span style="color:rgb(98,98,98)">3</span>
+
+<span class="ansi-red-fg ansi-bold">ValueError</span>: too many values to unpack (expected 2)</pre>
+</div>
+</div>
+</div>
+<p>To unpack first element to first variable and all the rest to second, you can use the <code>*</code> operator on the left side of the second variable name.</p>
+<div id="cell-16" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a, <span class="op">*</span>b <span class="op">=</span> <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(a), <span class="bu">type</span>(b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1 [2, 3]
+&lt;class 'int'&gt; &lt;class 'list'&gt;</code></pre>
+</div>
+</div>
+<p>Simply put <code>a</code> gets the first value <code>1</code> and <code>b</code> gets the remaining values as a <code>list</code>. Note that here <code>b</code> is a <code>list</code> type not a <code>tuple</code> type.</p>
+<p>You can also assign the last element to the last variable and <strong>unpack the rest</strong> to <code>b</code>.</p>
+<div id="cell-19" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a, <span class="op">*</span>b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b,c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1 [2, 3, 4] 5</code></pre>
+</div>
+</div>
+<div id="cell-20" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>list</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="functions" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="functions"><span class="header-section-number">5.4</span> Functions</h2>
+<p>A Function also return a tuple in the cases it returns multiple values at the same time.</p>
+<div id="cell-23" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiply_and_sum(a, b):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    product <span class="op">=</span> a <span class="op">*</span> b</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sum</span> <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> product, <span class="bu">sum</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>we will focus on functions very emphatatically later…</p>
+<p>Then, we can call the function with some values.</p>
+<div id="cell-26" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> multiply_and_sum(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results, <span class="bu">type</span>(results))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(12, 7) &lt;class 'tuple'&gt;</code></pre>
+</div>
+</div>
+<p>You can, of course, use the unpacking logic to get individual values.</p>
+<div id="cell-28" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>product, <span class="bu">sum</span> <span class="op">=</span> multiply_and_sum(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(product, <span class="bu">sum</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>12 7</code></pre>
+</div>
+</div>
 
 
 </section>
