@@ -3,7 +3,7 @@
 A simple and easy-to-follow Python book for beginners without **unnecessary details**.
 Just enough to get started doing work with Python.
 
-Moreover, this book will not focus on basics of the Python. Instead it will mention the basics enough to get started with real work. The main focus will be on utilizing Python for **Data Analysis and Visualization**.
+This book will not focus on basics of the Python. Instead it will mention the basics enough to get started with real work. The main focus will be on utilizing Python for **Data Analysis and Visualization**.
 
 Mainly:
 
