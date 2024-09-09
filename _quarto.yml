@@ -31,7 +31,8 @@ book:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: Cyborg
-  # pdf:
-  #   documentclass: scrreprt
+      light: Cosmo
+      dark: Vapor
+    highlight-style: github
+    monofont: "Cascadia Mono SemiBold"
+    code-block-bg: "#efefef"
