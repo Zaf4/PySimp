@@ -33,7 +33,7 @@ format:
     theme: 
       light: Cosmo
       dark: Vapor
-    highlight-style: github
+    highlight-style: github-dark
     css: custom.css
-    monofont: "Casc" 
-    code-block-bg: "#efefef"
+    monofont: "CascadiaLessBold"
+    # code-block-bg: "#262335" 

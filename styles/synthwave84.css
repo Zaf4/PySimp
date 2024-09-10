@@ -1,0 +1,102 @@
+/* Base background and text color */
+@font-face {
+    font-family: "CascadiaMono";
+    src: url("/MonoFont/CascadiaMono.ttf");
+  }
+
+pre, code {
+    background-color: #262335; /* Editor background from synthwave84 */
+    color: #ff7edb; /* Default text color (foreground) */
+    font-family: "CascadiaMono", monospace;
+    font-weight: 600;
+}
+
+/* Comments */
+code .hljs-comment {
+    color: #848bbd;
+    font-style: italic;
+}
+
+/* Strings */
+code .hljs-string {
+    color: #ff8b39;
+}
+
+/* Variables */
+code .hljs-variable {
+    color: #ff7edb;
+}
+code .hljs-variable.language {
+    color: #fe4450;
+}
+
+/* Keywords */
+code .hljs-keyword,
+code .hljs-keyword.control,
+code .hljs-keyword.operator {
+    color: #fede5d;
+}
+
+/* Constants and numbers */
+code .hljs-constant,
+code .hljs-number,
+code .hljs-constant.language {
+    color: #f97e72;
+}
+
+/* Functions */
+code .hljs-function {
+    color: #36f9f6;
+}
+
+/* Operators */
+code .hljs-operator {
+    color: #fede5d;
+}
+
+/* Types and classes */
+code .hljs-type,
+code .hljs-class {
+    color: #fe4450;
+}
+
+/* HTML/XML tags */
+code .hljs-tag,
+code .hljs-tag .hljs-name {
+    color: #72f1b8;
+}
+
+/* Punctuation */
+code .hljs-punctuation {
+    color: #b6b1b1;
+}
+
+/* Template strings */
+code .hljs-template-variable {
+    color: #72f1b8;
+}
+
+/* Attribute names */
+code .hljs-attr {
+    color: #fede5d;
+}
+
+/* Regex */
+code .hljs-regexp {
+    color: #f97e72;
+}
+
+/* Entity */
+code .hljs-entity {
+    color: #fe4450;
+}
+
+/* Bold text */
+code .hljs-strong {
+    font-weight: bold;
+}
+
+/* Italic text */
+code .hljs-emphasis {
+    font-style: italic;
+}
