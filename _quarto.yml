@@ -34,5 +34,6 @@ format:
       light: Cosmo
       dark: Vapor
     highlight-style: github
-    monofont: "Cascadia Mono SemiBold"
+    monofont: "Cascadia SemiBold Custom" 
     code-block-bg: "#efefef"
+    css: styles/font.scss
