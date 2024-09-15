@@ -1,0 +1,58 @@
+Concepts
+    Abstraction
+    FP
+    OOP
+    Method vs Function
+    scopes
+
+Functions
+    Purpose/syntax
+    Principles (Short, One-purpose, Clear syntax)
+    Type hinting
+
+Arrays (Numpy)
+    What is an Array
+        Heap versus Stack
+        data type persistence
+    Basic Operations
+    SIMD
+        Vectorized Operations
+    Axis
+    BroadCasting
+    Slicing
+
+DataFrames (Polars)
+    Tabular Data format & Principles
+        - column names
+        - data types
+        - observation versus attribute
+    Basic Operations
+        - methods/functions
+        - Adding Columns
+        - Type casting
+        - 
+    Tidying Data
+    Grouping and Aggregation
+
+Plotting
+    Grammar of Graphics
+    Layers
+        - Geoms
+        - Aesthetics
+        - Scales
+        - Themes
+        - Palettes
+
+## to the end
+Classes
+    
+File IO
+    read
+    write
+    append
+
+f-strings
+
+Tools
+    Ruff
+    uv
